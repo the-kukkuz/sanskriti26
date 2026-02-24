@@ -2,8 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar{
-  width: 0;
+:root {
+  --purple-dark: #1e0b4b;
+  --purple-deep: #0f0525;
+  --gold: #facd04;
+}
+
+body {
+  background-color: var(--purple-deep);
+  color: #e5e7eb;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--purple-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(250, 205, 4, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(250, 205, 4, 0.4);
 }
 
 @font-face {
@@ -16,28 +42,60 @@
 @font-face {
   font-family: "Courier";
   src: url("/fonts/CourierPrime-Regular.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
 }
 
 .section-heading {
   text-align: left;
-  font-family: Barlow;
-  font-weight: bold;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 800;
   text-transform: uppercase;
-  color: black;
-  font-size: 5rem;
-  line-height: 1;
+  color: var(--gold);
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px rgba(250, 205, 4, 0.2);
 }
 
-@media screen and (max-width: 768px) {
-  .section-heading {
-    font-size: 3rem;
-  }
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
 }
 
-ul{
-  list-style-type: decimal;
-  list-style-position: inside;
-  overflow-y: scroll;
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(250, 205, 4, 0.05);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(250, 205, 4, 0.2);
+  border-radius: 4px;
+}
+
+/* Custom selection color */
+::selection {
+  background: var(--gold);
+  color: var(--purple-deep);
+}
+
+.glass {
+  background: rgba(30, 11, 75, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(250, 205, 4, 0.1);
+}
+
+/* Scroll Animation classes */
+.reveal-section {
+  @apply opacity-0 translate-y-20 transition-all duration-1000 ease-out;
+}
+
+.reveal-section.visible {
+  @apply opacity-100 translate-y-0;
+}
+
+/* Gold Text Glow */
+.text-gold-glow {
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(250, 205, 4, 0.5);
 }
