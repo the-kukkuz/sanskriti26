@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar{
+  width: 0;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("/fonts/Barlow-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Courier";
+  src: url("/fonts/CourierPrime-Regular.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.section-heading {
+  text-align: left;
+  font-family: Barlow;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  font-size: 5rem;
+  line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .section-heading {
+    font-size: 3rem;
+  }
+}
+
+ul{
+  list-style-type: decimal;
+  list-style-position: inside;
+  overflow-y: scroll;
+}
