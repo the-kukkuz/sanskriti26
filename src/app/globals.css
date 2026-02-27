@@ -15,6 +15,8 @@ body {
   font-family: 'Advercase', sans-serif;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeSpeed;
 }
 
 ::-webkit-scrollbar {
@@ -114,4 +116,45 @@ body {
 .text-gold-glow {
   color: var(--gold);
   text-shadow: 0 0 10px rgba(250, 205, 4, 0.5);
+}
+
+/* GPU layer promotion for animated elements */
+.animate-flap,
+.animate-float,
+.animate-meteor-effect {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Disable expensive filters on low-powered devices */
+@media (max-width: 767px) {
+  .blur-3xl {
+    --tw-blur: blur(20px);
+  }
+
+  .blur-\[100px\] {
+    filter: blur(40px);
+  }
+
+  .blur-\[120px\] {
+    filter: blur(50px);
+  }
+
+  .blur-xl {
+    --tw-blur: blur(12px);
+  }
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-flap,
+  .animate-float,
+  .animate-meteor-effect,
+  .animate-ripple,
+  .animate-text-shimmer {
+    animation: none !important;
+  }
 }

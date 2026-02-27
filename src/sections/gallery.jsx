@@ -26,13 +26,14 @@ const Gallery = () => {
 
             {/* Parallax Background Logo */}
             <motion.div
-                style={{ y: y1, rotate, opacity: opacityLogo }}
+                style={{ y: y1, rotate, opacity: opacityLogo, willChange: "transform" }}
                 className="absolute top-0 left-0 w-full h-full flex items-center justify-center -z-10 pointer-events-none"
             >
                 <img
                     src="/images/S26logo.png"
                     alt="Background Logo"
                     className="w-[100%] max-w-5xl object-contain grayscale blur-xl"
+                    loading="lazy"
                 />
             </motion.div>
 
@@ -50,6 +51,7 @@ const Gallery = () => {
                         <img
                             src="/images/sanskriti-logo.png"
                             alt={`Gallery ${item}`}
+                            loading="lazy"
                             className="w-full h-full object-contain p-20 opacity-30 group-hover:scale-110 group-hover:opacity-60 transition-all duration-1000"
                         />
                         <div className="absolute bottom-10 left-10 z-20">

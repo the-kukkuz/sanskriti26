@@ -26,6 +26,7 @@ const SmallButterfly = ({ delay }) => {
                 ease: "easeInOut"
             }}
             className="absolute pointer-events-none z-20"
+            style={{ willChange: "transform, opacity" }}
         >
             <motion.img
                 src="/images/S26logo.png"
@@ -77,7 +78,7 @@ const BackgroundRipple = () => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 12, ease: "easeOut" }}
                         className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-center"
-                        style={{ left: `${r.x}%`, top: `${r.y}%` }}
+                        style={{ left: `${r.x}%`, top: `${r.y}%`, willChange: "transform, opacity" }}
                     >
                         <div className="absolute w-64 h-64 bg-[radial-gradient(circle,rgba(250,205,4,0.15)_0%,transparent_70%)] rounded-full blur-3xl" />
                         <span
@@ -169,6 +170,7 @@ const Preloader = ({ onFinish }) => {
                                         animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                                         transition={{ duration: 0.6, delay: 0.5 + index * 0.1, ease: "easeOut" }}
                                         className="inline-block"
+                                        style={{ willChange: "transform, filter, opacity" }}
                                     >
                                         {char === " " ? "\u00A0" : char}
                                     </motion.span>

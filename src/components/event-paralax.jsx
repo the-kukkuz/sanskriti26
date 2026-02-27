@@ -13,19 +13,26 @@ export const EventParallax = ({
     const secondRow = products.slice(5, 10);
     const thirdRow = products.slice(10, 15);
     const ref = React.useRef(null);
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start start", "end start"],
     });
 
-    const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+    // Softer spring on mobile to prevent jitter
+    const springConfig = isMobile
+        ? { stiffness: 80, damping: 25, bounce: 0 }
+        : { stiffness: 300, damping: 30, bounce: 100 };
+
+    // Reduced travel distance on mobile
+    const travelX = isMobile ? 200 : 1000;
 
     const translateX = useSpring(
-        useTransform(scrollYProgress, [0, 1], [0, 1000]),
+        useTransform(scrollYProgress, [0, 1], [0, travelX]),
         springConfig
     );
     const translateXReverse = useSpring(
-        useTransform(scrollYProgress, [0, 1], [0, -1000]),
+        useTransform(scrollYProgress, [0, 1], [0, -travelX]),
         springConfig
     );
     const rotateX = useSpring(
@@ -41,7 +48,7 @@ export const EventParallax = ({
         springConfig
     );
     const translateY = useSpring(
-        useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+        useTransform(scrollYProgress, [0, 0.2], [isMobile ? -200 : -700, isMobile ? 150 : 500]),
         springConfig
     );
 
@@ -157,7 +164,7 @@ export const ProductCard = ({
 }) => {
     return (
         <motion.div
-            style={{ x: translate }}
+            style={{ x: translate, willChange: "transform" }}
             key={product.title}
             className="group/product h-72 sm:h-[450px] w-96 sm:w-[550px] relative flex-shrink-0"
         >
@@ -168,7 +175,6 @@ export const ProductCard = ({
                     alt={product.title}
                     animate={{
                         opacity: [0.15, 0.4, 0.15],
-                        filter: ["brightness(1) blur(2px)", "brightness(1.8) blur(0px)", "brightness(1) blur(2px)"],
                     }}
                     transition={{
                         duration: 4 + (index % 3),

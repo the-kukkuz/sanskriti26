@@ -44,7 +44,7 @@ const BackgroundRipple = () => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 12, ease: "easeOut" }}
                         className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-center"
-                        style={{ left: `${r.x}%`, top: `${r.y}%` }}
+                        style={{ left: `${r.x}%`, top: `${r.y}%`, willChange: "transform, opacity" }}
                     >
                         <div className="absolute w-64 h-64 bg-[radial-gradient(circle,rgba(250,205,4,0.15)_0%,transparent_70%)] rounded-full blur-3xl" />
                         <span
@@ -62,7 +62,7 @@ const BackgroundRipple = () => {
 
 
 
-const AnimatedLetter = ({ letter, delay }) => {
+const AnimatedLetter = ({ letter, delay, isMobile }) => {
     const [font, setFont] = useState(fonts[0]);
     const [isStabilized, setIsStabilized] = useState(false);
 
@@ -93,7 +93,7 @@ const AnimatedLetter = ({ letter, delay }) => {
 
     const getFontSize = () => {
         if (!isStabilized) return "inherit";
-        if (typeof window !== 'undefined' && window.innerWidth < 350) return "15px";
+        if (isMobile) return "15px";
         return "30px";
     };
 
@@ -103,15 +103,18 @@ const AnimatedLetter = ({ letter, delay }) => {
             animate={{
                 opacity: 1,
                 scale: 1,
-                y: 0,
-                fontSize: getFontSize()
+                y: 0
             }}
             transition={{
                 delay: isStabilized ? 0 : delay * 1.5,
                 duration: isStabilized ? 0.8 : 1,
                 ease: "easeOut"
             }}
-            style={{ fontFamily: font }}
+            style={{
+                fontFamily: font,
+                fontSize: getFontSize(),
+                transition: isStabilized ? "font-size 0.8s ease-out" : "none"
+            }}
             className="inline-block"
         >
             {letter}
@@ -124,6 +127,14 @@ export default function Hero() {
     const [isFlying, setIsFlying] = useState(false);
     const containerRef = useRef(null);
     const isInView = useInView(containerRef, { amount: 0.5 }); // Trigger when 50% visible
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     useEffect(() => {
         if (isInView) {
@@ -198,15 +209,15 @@ export default function Hero() {
                     <motion.div
                         layoutId="main-logo"
                         initial={{
-                            x: -600,
-                            y: -400,
+                            x: -600 * (isMobile ? 0.4 : 1),
+                            y: -400 * (isMobile ? 0.4 : 1),
                             rotate: -120,
                             scale: 0.4,
                             opacity: 0
                         }}
                         animate={{
-                            x: isFlying ? [0, 200, 350, 100, -250, -400, -150, 0] : (revealTypo ? 0 : [-600, 400, -300, 150, 0]),
-                            y: isFlying ? [-90, -250, 50, 150, -50, 100, -150, -90] : (revealTypo ? -90 : [-400, 300, -350, 200, 0]),
+                            x: isFlying ? [0, 200 * (isMobile ? 0.4 : 1), 350 * (isMobile ? 0.4 : 1), 100 * (isMobile ? 0.4 : 1), -250 * (isMobile ? 0.4 : 1), -400 * (isMobile ? 0.4 : 1), -150 * (isMobile ? 0.4 : 1), 0] : (revealTypo ? 0 : [-600 * (isMobile ? 0.4 : 1), 400 * (isMobile ? 0.4 : 1), -300 * (isMobile ? 0.4 : 1), 150 * (isMobile ? 0.4 : 1), 0]),
+                            y: isFlying ? [-90 * (isMobile ? 0.4 : 1), -250 * (isMobile ? 0.4 : 1), 50 * (isMobile ? 0.4 : 1), 150 * (isMobile ? 0.4 : 1), -50 * (isMobile ? 0.4 : 1), 100 * (isMobile ? 0.4 : 1), -150 * (isMobile ? 0.4 : 1), -90 * (isMobile ? 0.4 : 1)] : (revealTypo ? -90 * (isMobile ? 0.4 : 1) : [-400 * (isMobile ? 0.4 : 1), 300 * (isMobile ? 0.4 : 1), -350 * (isMobile ? 0.4 : 1), 200 * (isMobile ? 0.4 : 1), 0]),
                             rotate: isFlying ? [0, 15, -10, 20, -15, 10, -20, 0] : (revealTypo ? 0 : [-120, 60, -45, 30, 0]),
                             scale: isFlying ? [0.75, 0.8, 0.7, 0.85, 0.75, 0.8, 0.7, 0.75] : (revealTypo ? 0.75 : 1.3),
                             opacity: 1,
@@ -217,6 +228,7 @@ export default function Hero() {
                             repeat: isFlying ? Infinity : 0,
                         }}
                         className="relative z-20"
+                        style={{ willChange: "transform" }}
                     >
                         <motion.img
                             src="/images/S26logo.png"
@@ -244,22 +256,22 @@ export default function Hero() {
                                 className="w-full max-w-[100vw] flex flex-nowrap justify-center text-[clamp(12px,7vw,4rem)] md:text-[clamp(4rem,9vw,10rem)] font-bold text-gold gap-x-0.5 md:gap-x-3 leading-none whitespace-nowrap px-2 md:px-4"
                             >
                                 {word1.split("").map((char, i) => (
-                                    <AnimatedLetter key={`${char}-${i}`} letter={char} delay={i * 0.08} />
+                                    <AnimatedLetter key={`${char}-${i}`} letter={char} delay={i * 0.08} isMobile={isMobile} />
                                 ))}
                                 <span className="mx-1 md:mx-3 text-[clamp(12px,7vw,4rem)] md:text-[clamp(4rem,9vw,10rem)]">&nbsp;</span>
                                 {word2.split("").map((char, i) => (
-                                    <AnimatedLetter key={`${char}-${i + 9}`} letter={char} delay={(i + 10) * 0.08} />
+                                    <AnimatedLetter key={`${char}-${i + 9}`} letter={char} delay={(i + 10) * 0.08} isMobile={isMobile} />
                                 ))}
                             </motion.div>
 
                             <motion.div
-                                initial={{ opacity: 0, letterSpacing: "0.1em" }}
-                                animate={{ opacity: 1, letterSpacing: "0.4em" }}
+                                initial={{ opacity: 0, letterSpacing: isMobile ? "0.05em" : "0.1em" }}
+                                animate={{ opacity: 1, letterSpacing: isMobile ? "0.2em" : "0.4em" }}
                                 transition={{ delay: 2.5, duration: 2, ease: "easeOut" }}
                                 className="flex items-center gap-4 md:gap-6"
                             >
                                 <div className="hidden md:block h-px w-16 bg-gradient-to-r from-transparent to-gold/40"></div>
-                                <h4 className="text-[10px] sm:text-lg md:text-xl font-bold font-advercase text-gold uppercase tracking-[0.4em] animate-text-shimmer">
+                                <h4 className="text-[10px] sm:text-lg md:text-xl font-bold font-advercase text-gold uppercase animate-text-shimmer" style={{ letterSpacing: 'inherit' }}>
                                     #ARTBEYONDAESTHETICS
                                 </h4>
                                 <div className="hidden md:block h-px w-16 bg-gradient-to-l from-transparent to-gold/40"></div>

@@ -63,16 +63,12 @@ export default function Events() {
                                 <div className="w-full md:w-3/5 flex flex-col gap-8 text-center md:text-left">
                                     <motion.h1
                                         className="item-heading"
-                                        variants={typingVariants}
-                                        initial="hidden"
-                                        whileInView="visible"
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.7, ease: "easeOut" }}
                                         viewport={{ once: true }}
                                     >
-                                        {event.event_name.split("").map((letter, i) => (
-                                            <motion.span key={i} variants={letterVariants}>
-                                                {letter}
-                                            </motion.span>
-                                        ))}
+                                        {event.event_name}
                                     </motion.h1>
 
                                     <motion.p

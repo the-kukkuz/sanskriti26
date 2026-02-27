@@ -48,20 +48,20 @@ export default {
                     },
                 },
                 float: {
-                    "0%, 100%": { transform: "translateY(0)" },
-                    "50%": { transform: "translateY(-10px)" },
+                    "0%, 100%": { transform: "translate3d(0, 0, 0)" },
+                    "50%": { transform: "translate3d(0, -10px, 0)" },
                 },
                 ripple: {
-                    "0%": { transform: "scale(1)", opacity: "0.5" },
-                    "100%": { transform: "scale(2.5)", opacity: "0" },
+                    "0%": { transform: "scale3d(1, 1, 1)", opacity: "0.5" },
+                    "100%": { transform: "scale3d(2.5, 2.5, 1)", opacity: "0" },
                 },
                 flap: {
-                    "0%": { transform: "scaleX(1)" },
-                    "100%": { transform: "scaleX(0.4)" },
+                    "0%": { transform: "scaleX(1) translateZ(0)" },
+                    "100%": { transform: "scaleX(0.4) translateZ(0)" },
                 },
                 "text-shimmer": {
-                    "0%": { opacity: "0.5", filter: "blur(0px)" },
-                    "100%": { opacity: "1", filter: "blur(0.5px)" },
+                    "0%": { opacity: "0.5" },
+                    "100%": { opacity: "1" },
                 }
             },
         },
