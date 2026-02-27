@@ -53,8 +53,8 @@ const Gallery = () => {
                             className="w-full h-full object-contain p-20 opacity-30 group-hover:scale-110 group-hover:opacity-60 transition-all duration-1000"
                         />
                         <div className="absolute bottom-10 left-10 z-20">
-                            <p className="text-gold/50 font-barlow font-bold text-sm uppercase tracking-[0.3em] group-hover:text-gold transition-colors">Frame 00{item}</p>
-                            <h3 className="text-white font-barlow font-bold text-2xl uppercase mt-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">Capture the pulse</h3>
+                            <p className="text-gold/50 font-advercase font-bold text-sm uppercase tracking-[0.3em] group-hover:text-gold transition-colors">Frame 00{item}</p>
+                            <h3 className="item-heading mt-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 !text-xl md:!text-2xl">Capture the pulse</h3>
                         </div>
                     </motion.div>
                 ))}

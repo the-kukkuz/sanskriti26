@@ -62,7 +62,7 @@ export default function Events() {
 
                                 <div className="w-full md:w-3/5 flex flex-col gap-8 text-center md:text-left">
                                     <motion.h1
-                                        className="font-bold text-5xl md:text-8xl text-gold font-barlow uppercase tracking-tighter"
+                                        className="item-heading"
                                         variants={typingVariants}
                                         initial="hidden"
                                         whileInView="visible"
@@ -80,7 +80,7 @@ export default function Events() {
                                         whileInView={{ opacity: 1 }}
                                         transition={{ duration: 1, delay: 0.5 }}
                                         viewport={{ once: true }}
-                                        className="text-secondary/60 text-lg md:text-xl leading-relaxed font-inter"
+                                        className="text-secondary/60 text-lg md:text-xl leading-relaxed font-advercase"
                                     >
                                         {event.event_description}
                                     </motion.p>

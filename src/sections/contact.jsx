@@ -53,7 +53,7 @@ const ContactPage = () => {
                         viewport={{ once: true }}
                         className="w-full lg:w-1/2 bg-purple-dark/10 p-10 md:p-16 rounded-[3rem] border border-gold/10 shadow-3xl flex flex-col backdrop-blur-3xl"
                     >
-                        <h2 className="text-4xl font-bold mb-12 text-gold font-barlow uppercase tracking-tighter">Inquiry Hub</h2>
+                        <h2 className="item-heading mb-12">Inquiry Hub</h2>
 
                         <div className="space-y-10 mb-16">
                             {contactPersons.map((person, index) => (

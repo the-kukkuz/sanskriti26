@@ -24,8 +24,10 @@ export default {
             fontFamily: {
                 barlow: ["Barlow", "sans-serif"],
                 courier: ["Courier", "monospace"],
+                rockybilly: ["Rockybilly", "sans-serif"],
+                advercase: ["Advercase", "serif"],
                 aesthetic: ["'Playfair Display'", "serif"],
-                modern: ["'Inter'", "sans-serif"],
+                modern: ["'Advercase'", "sans-serif"],
                 funky: ["'Bungee'", "cursive"],
             },
             animation: {

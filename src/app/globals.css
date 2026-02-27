@@ -12,24 +12,13 @@ body {
   background-color: var(--purple-deep);
   color: #e5e7eb;
   overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Advercase', sans-serif;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--purple-deep);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(250, 205, 4, 0.2);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(250, 205, 4, 0.4);
+  display: none;
 }
 
 @font-face {
@@ -46,30 +35,57 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Advercase";
+  src: url("/fonts/Advercase-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Advercase";
+  src: url("/fonts/Advercase-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rockybilly";
+  src: url("/fonts/Rockybilly.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .section-heading {
   text-align: left;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 800;
+  font-family: 'Advercase', sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
   color: var(--gold);
-  font-size: clamp(3rem, 10vw, 7rem);
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-  margin-bottom: 2rem;
+  font-size: clamp(2rem, 10vw, 5.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
   text-shadow: 0 0 20px rgba(250, 205, 4, 0.2);
 }
 
+.item-heading {
+  font-family: 'Advercase', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-size: clamp(1.5rem, 6vw, 4rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.custom-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(250, 205, 4, 0.05);
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(250, 205, 4, 0.2);
-  border-radius: 4px;
+  display: none;
 }
 
 /* Custom selection color */

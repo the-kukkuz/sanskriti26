@@ -85,10 +85,10 @@ export default function Competitions() {
                                 <div className="absolute top-6 right-6 bg-gold text-purple-deep px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] font-barlow shadow-lg">LIVE '26</div>
                             </div>
 
-                            <h3 className="text-4xl font-bold mb-6 text-gold font-barlow uppercase tracking-tighter group-hover:tracking-normal transition-all duration-500">{competition.title}</h3>
+                            <h3 className="item-heading mb-6 group-hover:tracking-normal transition-all duration-500">{competition.title}</h3>
 
                             <p
-                                className="text-secondary/50 mb-8 flex-grow font-inter text-sm leading-relaxed"
+                                className="text-secondary/50 mb-8 flex-grow font-advercase text-sm leading-relaxed"
                                 dangerouslySetInnerHTML={{
                                     __html: competition.description
                                         .replace(/\*\*(.*?)\*\*/g, '<strong class="text-gold">$1</strong>')

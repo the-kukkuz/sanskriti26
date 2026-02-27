@@ -100,8 +100,8 @@ const Navbar = () => {
                                 alt="Sanskriti Logo"
                                 className="w-7 h-7 md:w-10 md:h-10 object-contain animate-flap drop-shadow-[0_0_15px_rgba(250,205,4,0.4)]"
                             />
-                            <span className="text-[6px] md:text-[8px] font-barlow font-bold text-gold uppercase tracking-[0.2em] mt-1 whitespace-nowrap">
-                                SANSKRITI 26
+                            <span className="text-[6px] md:text-[8px] font-advercase font-bold text-gold uppercase tracking-[0.2em] mt-1 whitespace-nowrap">
+                                SANSKRITI'26
                             </span>
                         </div>
 

@@ -13,31 +13,104 @@ const fonts = [
     "'Inter', sans-serif"
 ];
 
-const AnimatedLetter = ({ letter, delay }) => {
-    const [font, setFont] = useState(fonts[0]);
+const sanskritiWords = ["SANSKRITI", "സംസ്കൃതി", "संस्कृति", "சமஸ்கிருதி", "సంస్కృతి", "ಸಂಸ್ಕೃತಿ"];
+
+const BackgroundRipple = () => {
+    const [ripples, setRipples] = useState([]);
 
     useEffect(() => {
+        const addRipple = () => {
+            const newRipple = {
+                id: Date.now(),
+                x: Math.random() * 100,
+                y: Math.random() * 100,
+                word: sanskritiWords[Math.floor(Math.random() * sanskritiWords.length)]
+            };
+            setRipples(prev => [...prev.slice(-12), newRipple]);
+            const nextDelay = 1500 + Math.random() * 2500;
+            setTimeout(addRipple, nextDelay);
+        };
+        addRipple();
+    }, []);
+
+    return (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+            <AnimatePresence>
+                {ripples.map(r => (
+                    <motion.div
+                        key={r.id}
+                        initial={{ scale: 0.5, opacity: 0 }}
+                        animate={{ scale: [0.5, 3], opacity: [0, 0.4, 0] }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 12, ease: "easeOut" }}
+                        className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-center"
+                        style={{ left: `${r.x}%`, top: `${r.y}%` }}
+                    >
+                        <div className="absolute w-64 h-64 bg-[radial-gradient(circle,rgba(250,205,4,0.15)_0%,transparent_70%)] rounded-full blur-3xl" />
+                        <span
+                            className="text-5xl md:text-8xl font-black text-gold/60 whitespace-nowrap blur-[1px] select-none tracking-widest drop-shadow-md z-0"
+                            style={{ fontFamily: "sans-serif" }}
+                        >
+                            {r.word}
+                        </span>
+                    </motion.div>
+                ))}
+            </AnimatePresence>
+        </div>
+    );
+};
+
+
+
+const AnimatedLetter = ({ letter, delay }) => {
+    const [font, setFont] = useState(fonts[0]);
+    const [isStabilized, setIsStabilized] = useState(false);
+
+    useEffect(() => {
+        const stabilizationTime = 2500 + delay * 150;
+
         const interval = setInterval(() => {
             const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
             setFont(randomFont);
         }, 200 + Math.random() * 400); // Slower font cycling
 
-        const timeout = setTimeout(() => {
+        const preStabilizeTimeout = setTimeout(() => {
             clearInterval(interval);
-            setFont("'Barlow', sans-serif");
-        }, 2500 + delay * 150); // Slower stabilization
+            setFont("'Pacifico', cursive"); // Guaranteeing a distinct cursive font
+        }, Math.max(0, stabilizationTime - 500)); // Show for half a second before stabilization
+
+        const timeout = setTimeout(() => {
+            setFont("'Rockybilly', sans-serif");
+            setIsStabilized(true);
+        }, stabilizationTime);
 
         return () => {
             clearInterval(interval);
+            clearTimeout(preStabilizeTimeout);
             clearTimeout(timeout);
         };
     }, [delay]);
 
+    const getFontSize = () => {
+        if (!isStabilized) return "inherit";
+        if (typeof window !== 'undefined' && window.innerWidth < 350) return "15px";
+        return "30px";
+    };
+
     return (
         <motion.span
             initial={{ opacity: 0, scale: 0.5, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ delay: delay * 1.5, duration: 1, ease: "easeOut" }} // Slower reveal
+            animate={{
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                fontSize: getFontSize()
+            }}
+            transition={{
+                delay: isStabilized ? 0 : delay * 1.5,
+                duration: isStabilized ? 0.8 : 1,
+                ease: "easeOut"
+            }}
             style={{ fontFamily: font }}
             className="inline-block"
         >
@@ -48,6 +121,7 @@ const AnimatedLetter = ({ letter, delay }) => {
 
 export default function Hero() {
     const [revealTypo, setRevealTypo] = useState(false);
+    const [isFlying, setIsFlying] = useState(false);
     const containerRef = useRef(null);
     const isInView = useInView(containerRef, { amount: 0.5 }); // Trigger when 50% visible
 
@@ -56,28 +130,37 @@ export default function Hero() {
             const timer = setTimeout(() => {
                 setRevealTypo(true);
             }, 1000); // Snappier starting delay
-            return () => clearTimeout(timer);
+
+            const flyTimer = setTimeout(() => {
+                setIsFlying(true);
+            }, 2500); // 1.0s delay + 1.5s reveal transition time = seamless
+            return () => { clearTimeout(timer); clearTimeout(flyTimer); };
         } else {
-            setRevealTypo(false); // Reset when scrolled away
+            setRevealTypo(false);
+            setIsFlying(false); // Reset when scrolled away
         }
     }, [isInView]);
 
     const word1 = "SANSKRITI";
-    const word2 = "26";
+    const word2 = "'26";
 
     return (
         <section
             ref={containerRef}
             className="relative w-full h-[100vh] flex flex-col items-center justify-center overflow-hidden bg-purple-deep"
         >
-            {/* Background Gradient */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(250,205,4,0.1)_0%,rgba(30,11,75,1)_60%,rgba(15,5,37,1)_100%)]"></div>
+            {/* Background Transitions & Effects */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(250,205,4,0.08)_0%,rgba(30,11,75,1)_65%,rgba(15,5,37,1)_100%)]"></div>
+
+            {/* Continuous Movement Ripples */}
+            <BackgroundRipple />
 
             {/* Content Container */}
             <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 w-full">
 
                 {/* Dancing Butterfly Logo */}
                 <div className="relative mb-4 md:mb-8 flex items-center justify-center">
+
                     {/* Background Settlement Ripple (Large & Soft) */}
                     <AnimatePresence>
                         {revealTypo && (
@@ -122,15 +205,16 @@ export default function Hero() {
                             opacity: 0
                         }}
                         animate={{
-                            x: revealTypo ? 0 : [-600, 400, -300, 150, 0],
-                            y: revealTypo ? -90 : [-400, 300, -350, 200, 0],
-                            rotate: revealTypo ? 0 : [-120, 60, -45, 30, 0],
-                            scale: revealTypo ? 0.75 : 1.3,
+                            x: isFlying ? [0, 200, 350, 100, -250, -400, -150, 0] : (revealTypo ? 0 : [-600, 400, -300, 150, 0]),
+                            y: isFlying ? [-90, -250, 50, 150, -50, 100, -150, -90] : (revealTypo ? -90 : [-400, 300, -350, 200, 0]),
+                            rotate: isFlying ? [0, 15, -10, 20, -15, 10, -20, 0] : (revealTypo ? 0 : [-120, 60, -45, 30, 0]),
+                            scale: isFlying ? [0.75, 0.8, 0.7, 0.85, 0.75, 0.8, 0.7, 0.75] : (revealTypo ? 0.75 : 1.3),
                             opacity: 1,
                         }}
                         transition={{
-                            duration: revealTypo ? 1.5 : 4,
-                            ease: [0.16, 1, 0.3, 1],
+                            duration: isFlying ? 24 : (revealTypo ? 1.5 : 4),
+                            ease: isFlying ? "easeInOut" : [0.16, 1, 0.3, 1],
+                            repeat: isFlying ? Infinity : 0,
                         }}
                         className="relative z-20"
                     >
@@ -154,15 +238,15 @@ export default function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="flex flex-col items-center mt-[-20px] md:mt-0"
+                            className="flex flex-col items-center mt-[-20px] md:mt-0 gap-6 md:gap-10"
                         >
                             <motion.div
-                                className="flex flex-nowrap justify-center text-4xl sm:text-6xl md:text-[8rem] font-bold text-gold gap-x-1 md:gap-x-3 leading-none whitespace-nowrap"
+                                className="w-full max-w-[100vw] flex flex-nowrap justify-center text-[clamp(12px,7vw,4rem)] md:text-[clamp(4rem,9vw,10rem)] font-bold text-gold gap-x-0.5 md:gap-x-3 leading-none whitespace-nowrap px-2 md:px-4"
                             >
                                 {word1.split("").map((char, i) => (
                                     <AnimatedLetter key={`${char}-${i}`} letter={char} delay={i * 0.08} />
                                 ))}
-                                <span className="mx-1 md:mx-3"></span>
+                                <span className="mx-1 md:mx-3 text-[clamp(12px,7vw,4rem)] md:text-[clamp(4rem,9vw,10rem)]">&nbsp;</span>
                                 {word2.split("").map((char, i) => (
                                     <AnimatedLetter key={`${char}-${i + 9}`} letter={char} delay={(i + 10) * 0.08} />
                                 ))}
@@ -172,11 +256,11 @@ export default function Hero() {
                                 initial={{ opacity: 0, letterSpacing: "0.1em" }}
                                 animate={{ opacity: 1, letterSpacing: "0.4em" }}
                                 transition={{ delay: 2.5, duration: 2, ease: "easeOut" }}
-                                className="mt-8 md:mt-12 flex items-center gap-4 md:gap-6"
+                                className="flex items-center gap-4 md:gap-6"
                             >
                                 <div className="hidden md:block h-px w-16 bg-gradient-to-r from-transparent to-gold/40"></div>
-                                <h4 className="text-[10px] sm:text-lg md:text-xl font-bold font-barlow text-gold uppercase tracking-[0.4em] animate-text-shimmer">
-                                    #ART BEYOND AESTHETICS
+                                <h4 className="text-[10px] sm:text-lg md:text-xl font-bold font-advercase text-gold uppercase tracking-[0.4em] animate-text-shimmer">
+                                    #ARTBEYONDAESTHETICS
                                 </h4>
                                 <div className="hidden md:block h-px w-16 bg-gradient-to-l from-transparent to-gold/40"></div>
                             </motion.div>
@@ -185,9 +269,9 @@ export default function Hero() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 3.2, duration: 1 }}
-                                className="mt-6 md:mt-8 font-inter font-medium text-[8px] sm:text-sm md:text-base text-secondary/40 tracking-[0.2em] uppercase"
+                                className="font-advercase font-medium text-[8px] sm:text-sm md:text-base text-secondary/40 tracking-[0.2em] uppercase"
                             >
-                                MARCH 6 • 7 • 8 | MACE KOTHAMANGALAM
+                                MARCH 5 • 6 • 7 | MACE KOTHAMANGALAM
                             </motion.p>
                         </motion.div>
                     )}

@@ -79,7 +79,7 @@ const FAQ = () => {
                                     >
                                         <div className="px-8 md:px-10 pb-10 pt-0">
                                             <div className="w-full h-px bg-gold/10 mb-8"></div>
-                                            <p className="text-secondary/60 font-courier text-lg md:text-xl leading-relaxed">
+                                            <p className="text-secondary/60 font-advercase text-lg md:text-xl leading-relaxed">
                                                 {faq.answer}
                                             </p>
                                         </div>
