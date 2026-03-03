@@ -696,6 +696,105 @@ export const groupEvents = [
     },
 ];
 
+export const alaiEvents = [
+    {
+        id: 0,
+        title: "Artist",
+        description: "Presenting ALAI 🌊 Dance, sing, play, perform—this is your spotlight moment!",
+        reg_fees: "",
+        src: "/Alai/artist.jpeg",
+        ctaText: "Register",
+        non_mace_link: "https://forms.gle/Ljh5LAGYVQxcMTif7",
+        content: () => {
+            return (
+                <>
+                    <p>Presenting ALAI 🌊</p>
+                    <ul>
+                        <li>Dance 💃, sing 🎶, play 🎸, perform 🎤—whatever your talent is, this is your spotlight moment!</li>
+                        <li>ALAI is a platform at Sanskriti’26 where performers of all styles can showcase their creativity and vibe.</li>
+                        <li>Register now: <a href="https://forms.gle/Ljh5LAGYVQxcMTif7" className="text-gold underline">https://forms.gle/Ljh5LAGYVQxcMTif7</a></li>
+                        <li>Step up. Show up. Own the spotlight. 🔥</li>
+                        <li>Contacts:<br />
+                            Pavan – 7736506909<br />
+                            Diya – 8078774366
+                        </li>
+                    </ul>
+                </>
+            );
+        },
+    },
+    {
+        id: 3,
+        title: "Artwork",
+        description: "Your canvas, your rules. Let your imagination break the frame!",
+        reg_fees: "",
+        src: "/Alai/artwork.jpeg",
+        ctaText: "Register",
+        non_mace_link: "https://forms.gle/2MfhLR5B5HvT3uNw5",
+        content: () => {
+            return (
+                <>
+                    <p>Your canvas, your rules. Let your imagination break the frame!</p>
+                    <ul>
+                        <li>As part of Sanskriti’26, ALAI invites artists and creators to showcase their vision.</li>
+                        <li>Any medium is welcome – paintings, sketches, handmade crafts, designs, or other unique expressions.</li>
+                        <li>Show the world through your eyes and win appreciation!</li>
+                        <li>Register here: <a href="https://forms.gle/2MfhLR5B5HvT3uNw5" className="text-gold underline">https://forms.gle/2MfhLR5B5HvT3uNw5</a></li>
+                        <li>Questions?<br />
+                            Pavan: 7736506909<br />
+                            Diya: 8078774366<br />
+                            Sivapriya: 9207986295
+                        </li>
+                    </ul>
+                </>
+            );
+        },
+    },
+    {
+        id: 1,
+        title: "Second Story",
+        description: "Got outfits you don’t wear anymore? Don’t dump them, give them a Second Story!",
+        reg_fees: "",
+        src: "/Alai/secondstory.jpeg",
+        ctaText: "Explore",
+        content: () => {
+            return (
+                <ul>
+                    <li>As part of Sanskriti’26, ALAI brings you a thrift initiative where fashion gets a fresh vibe, new owners, and brand-new memories.</li>
+                    <li>Drop your thrift items & pass the vibe forward!</li>
+                    <li>Contacts:<br />
+                        Mariah – 85470 13357<br />
+                        Pavan – 7736506909<br />
+                        Diya – 8078774366
+                    </li>
+                </ul>
+            );
+        },
+    },
+    {
+        id: 2,
+        title: "Vendors",
+        description: "Call for vendors – showcase your spark at ALAI '26",
+        reg_fees: "",
+        src: "/Alai/vendors.jpeg",
+        ctaText: "Register",
+        non_mace_link: "https://forms.gle/47YPQGQVurTFze9t5",
+        content: () => {
+            return (
+                <ul>
+                    <li>We invite passionate vendors to showcase unique products and connect with an energetic crowd.</li>
+                    <li>Acceptable shops: handmade items, art, lifestyle products, or food.</li>
+                    <li>Register: <a href="https://forms.gle/47YPQGQVurTFze9t5" className="text-gold underline">https://forms.gle/47YPQGQVurTFze9t5</a></li>
+                    <li>Inquiries:
+                        <br />▫️ Pavan: 7736506909
+                        <br />▫️ Diya: 8078774366
+                    </li>
+                </ul>
+            );
+        },
+    },
+];
+
 export const main_events = [
     {
         event_name: "Arang",
@@ -705,8 +804,9 @@ export const main_events = [
     },
     {
         event_name: "Alai",
-        event_description: "Step into the enchanting realm of Alai, where creativity flows like waves, blending diverse artistic expressions into a vibrant celebration. More than just an event, Alai is a source of artistic inspiration, featuring everything from mesmerizing paintings to captivating performances that push creative boundaries. Join us to ride the waves of creativity and uncover hidden talents!",
+        event_description: "An in‑college celebration where students take the stage and walls. ALAI gives everyone in the campus a chance to contribute, perform, design and exhibit — whether it’s a poster, a performance, a stall or a thrifted treasure. It’s our community’s own creative playground, made by and for MACEians.",
         event_image: "/images/S26logoforposterswhitebg.png",
+        event_link: "/alai",
     },
     {
         event_name: "ProShow",

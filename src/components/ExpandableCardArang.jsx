@@ -108,11 +108,21 @@ export function ExpandableCardArang({ events }) {
                                     <motion.button
                                         layoutId={`cta-${active.title}-${active.id}`}
                                         onClick={() => {
-                                            setIsModalOpen(true)
-                                            setLink({
-                                                non_mace_link: active.non_mace_link,
-                                                mace_link: active.mace_link,
-                                            })
+                                            // if on Alai page and the event has a registration link, alert about MACEians
+                                            if (typeof window !== 'undefined' && window.location.pathname.startsWith('/alai') && (active.non_mace_link || active.mace_link)) {
+                                                alert('Registration is only for MACEians');
+                                                // redirect to whichever link is available (prefer non_mace for guests)
+                                                const target = active.non_mace_link || active.mace_link;
+                                                if (target) {
+                                                    window.location.href = target;
+                                                }
+                                            } else {
+                                                setIsModalOpen(true);
+                                                setLink({
+                                                    non_mace_link: active.non_mace_link,
+                                                    mace_link: active.mace_link,
+                                                });
+                                            }
                                         }}
                                         className="px-8 py-3 rounded-full font-bold bg-gold text-purple-dark hover:bg-white hover:scale-105 transition-all shadow-lg"
                                     >
