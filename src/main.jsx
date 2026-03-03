@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './app/page'
 import Arang from './app/arang/page'
+import Alai from './app/alai/page'
 import './app/globals.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -11,6 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/arang" element={<Arang />} />
+                <Route path="/alai" element={<Alai />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>,
