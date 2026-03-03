@@ -162,8 +162,8 @@ const Preloader = ({ onFinish }) => {
                             transition={{ delay: 0.5, duration: 1 }}
                             className="mt-8 text-center"
                         >
-                            <h2 className="flex justify-center flex-wrap text-gold text-[15px] xs:text-[30px] md:text-5xl font-normal tracking-[0.1em] xs:tracking-[0.2em] font-rockybilly uppercase leading-relaxed">
-                                {"SANSKRITI'26".split("").map((char, index) => (
+                            <h2 className="flex justify-center flex-wrap text-gold text-[15px] xs:text-[30px] md:text-5xl font-normal tracking-[0.1em] xs:tracking-[0.2em] font-rockybilly leading-relaxed">
+                                {"Sanskriti'26".split("").map((char, index) => (
                                     <motion.span
                                         key={index}
                                         initial={{ opacity: 0, scale: 0.8, filter: "blur(4px)" }}

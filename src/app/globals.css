@@ -147,6 +147,36 @@ body {
   }
 }
 
+/* Gliding shimmer on text — a light sweep from left to right */
+.glide-shimmer-text {
+  background: linear-gradient(90deg,
+      rgba(229, 231, 235, 0.45) 0%,
+      rgba(229, 231, 235, 0.45) 35%,
+      rgba(250, 205, 4, 0.85) 50%,
+      rgba(229, 231, 235, 0.45) 65%,
+      rgba(229, 231, 235, 0.45) 100%);
+  background-size: 250% 100%;
+  background-position: 150% center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glide-shimmer 4s ease-in-out infinite;
+}
+
+@keyframes glide-shimmer {
+  0% {
+    background-position: 150% center;
+  }
+
+  50% {
+    background-position: -50% center;
+  }
+
+  100% {
+    background-position: 150% center;
+  }
+}
+
 /* Respect user preference for reduced motion */
 @media (prefers-reduced-motion: reduce) {
 
@@ -154,7 +184,9 @@ body {
   .animate-float,
   .animate-meteor-effect,
   .animate-ripple,
-  .animate-text-shimmer {
+  .animate-text-shimmer,
+  .glide-shimmer-text {
     animation: none !important;
+    -webkit-text-fill-color: rgba(229, 231, 235, 0.6);
   }
 }

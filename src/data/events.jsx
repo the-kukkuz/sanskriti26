@@ -700,27 +700,27 @@ export const main_events = [
     {
         event_name: "Arang",
         event_description: "Step into the vibrant world of Arangu, where art knows no bounds. This VIBRANT EXTRAVAGANZA celebrates the perfect blend of traditional and contemporary art forms. Imagine a rich tapestry of music, dance, theater, and visual arts, woven together to create an unforgettable experience. From classical performances that showcase our cultural heritage to modern masterpieces that push the boundaries of creativity, Arangu is a true celebration of artistic expression.",
-        event_image: "/images/S26logo.png",
+        event_image: "/images/S26logoforposterswhitebg.png",
         event_link: "/arang"
     },
     {
         event_name: "Alai",
         event_description: "Step into the enchanting realm of Alai, where creativity flows like waves, blending diverse artistic expressions into a vibrant celebration. More than just an event, Alai is a source of artistic inspiration, featuring everything from mesmerizing paintings to captivating performances that push creative boundaries. Join us to ride the waves of creativity and uncover hidden talents!",
-        event_image: "/images/S26logo.png",
+        event_image: "/images/S26logoforposterswhitebg.png",
     },
     {
         event_name: "ProShow",
         event_description: "Step into the Spotlight at Sanskriti’26 – A Symphony of Art At Sanskriti’26, Proshows weave music, dance, and storytelling into a breathtaking spectacle. Experience soul-stirring melodies, mesmerizing dance, and electrifying performances that ignite the stage. Each act is a masterpiece, capturing the essence of artistic brilliance and boundless energy.",
-        event_image: "/images/S26logo.png",
+        event_image: "/images/S26logoforposterswhitebg.png",
     },
     {
         event_name: "Jalakam",
         event_description: "Sanskriti is a celebration of art, passion, and togetherness, and Jaalakam is where its purest form comes to life. A space where creativity knows no bounds, Jaalakam brings forth talents that inspire and stories that touch the heart. It is a tribute to those whose spirit and joy make them special from others.",
-        event_image: "/images/S26logo.png",
+        event_image: "/images/S26logoforposterswhitebg.png",
     },
     {
         event_name: "Drishyam",
         event_description: "Step into the world of cinema at Sanskriti'26, where Drishyam serves as a time capsule, preserving moments through the magic of film. From the nostalgia of monochrome classics to the vibrancy of contemporary storytelling and the possibilities of the future, Drishyam showcases the power of film to capture cultural snapshots.",
-        event_image: "/images/S26logo.png",
+        event_image: "/images/S26logoforposterswhitebg.png",
     },
 ]

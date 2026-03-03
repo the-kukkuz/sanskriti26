@@ -14,9 +14,20 @@ const navLinksRight = [
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
+    const [expanded, setExpanded] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
+
+    // When the navbar first appears (after hero), delay expanding to full bar on desktop
+    useEffect(() => {
+        if (scrolled) {
+            // Brief pause then expand to full on desktop
+            const t = setTimeout(() => setExpanded(true), 600);
+            return () => clearTimeout(t);
+        } else {
+            setExpanded(false);
+        }
+    }, [scrolled]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,25 +65,24 @@ const Navbar = () => {
                     className="fixed top-4 md:top-6 left-0 w-full z-[100] flex justify-center pointer-events-none"
                 >
                     <motion.div
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => setIsHovered(false)}
                         animate={{
-                            width: isHovered ? 'auto' : '100px',
-                            paddingLeft: isHovered ? '32px' : '0px',
-                            paddingRight: isHovered ? '32px' : '0px',
+                            // On mobile always show compact; on desktop expand after delay
+                            width: expanded ? 'auto' : '100px',
+                            paddingLeft: expanded ? '32px' : '0px',
+                            paddingRight: expanded ? '32px' : '0px',
                         }}
-                        transition={{ duration: 0.2, ease: "circOut" }}
-                        className="relative pointer-events-auto flex items-center justify-center bg-purple-deep/70 backdrop-blur-xl rounded-[3rem] border border-gold/10 shadow-[0_0_30px_rgba(15,5,37,0.5)] py-2 md:py-3 group transition-all duration-300 hover:border-gold/30 min-h-[60px] md:min-h-[70px] overflow-hidden"
+                        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                        className="relative pointer-events-auto flex items-center justify-center bg-purple-deep/70 backdrop-blur-xl rounded-[3rem] border border-gold/10 shadow-[0_0_30px_rgba(15,5,37,0.5)] py-2 md:py-3 group transition-colors duration-300 hover:border-gold/30 min-h-[60px] md:min-h-[70px] overflow-hidden"
                     >
-                        {/* Left Links */}
+                        {/* Left Links — shown only when expanded */}
                         <div className="flex items-center justify-end">
                             <AnimatePresence mode="wait">
-                                {isHovered && (
+                                {expanded && (
                                     <motion.div
-                                        initial={{ opacity: 0, x: 10 }}
+                                        initial={{ opacity: 0, x: 16 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        exit={{ opacity: 0, x: 10 }}
-                                        transition={{ duration: 0.15 }}
+                                        exit={{ opacity: 0, x: 16 }}
+                                        transition={{ duration: 0.25, delay: 0.1 }}
                                         className="flex items-center gap-4 md:gap-8 mr-6 md:mr-10"
                                     >
                                         {navLinksLeft.map((link) => (
@@ -96,7 +106,7 @@ const Navbar = () => {
                         >
                             <motion.img
                                 layoutId="main-logo"
-                                src="/images/S26logo.png"
+                                src="/images/S26logo_whiteoutline.png"
                                 alt="Sanskriti Logo"
                                 className="w-7 h-7 md:w-10 md:h-10 object-contain animate-flap drop-shadow-[0_0_15px_rgba(250,205,4,0.4)]"
                             />
@@ -105,15 +115,15 @@ const Navbar = () => {
                             </span>
                         </div>
 
-                        {/* Right Links */}
+                        {/* Right Links — shown only when expanded */}
                         <div className="flex items-center justify-start">
                             <AnimatePresence mode="wait">
-                                {isHovered && (
+                                {expanded && (
                                     <motion.div
-                                        initial={{ opacity: 0, x: -10 }}
+                                        initial={{ opacity: 0, x: -16 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        exit={{ opacity: 0, x: -10 }}
-                                        transition={{ duration: 0.15 }}
+                                        exit={{ opacity: 0, x: -16 }}
+                                        transition={{ duration: 0.25, delay: 0.1 }}
                                         className="flex items-center gap-4 md:gap-8 ml-6 md:ml-10"
                                     >
                                         {navLinksRight.map((link) => (

@@ -76,7 +76,7 @@ export default function Events() {
                                         whileInView={{ opacity: 1 }}
                                         transition={{ duration: 1, delay: 0.5 }}
                                         viewport={{ once: true }}
-                                        className="text-secondary/60 text-lg md:text-xl leading-relaxed font-advercase"
+                                        className="text-lg md:text-xl leading-relaxed font-advercase glide-shimmer-text"
                                     >
                                         {event.event_description}
                                     </motion.p>
