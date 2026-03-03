@@ -15,7 +15,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="relative bg-purple-deep pt-12 pb-8 md:pt-24 md:pb-12 px-6 md:px-20 border-t border-gold/5 overflow-hidden">
+        <footer className="relative bg-purple-deep pt-12 pb-8 md:pt-24 md:pb-12 px-6 md:px-20 overflow-hidden">
             {/* Background Ambient Glow */}
             <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-gold/[0.03] rounded-full blur-[120px] -z-10 pointer-events-none" />
 

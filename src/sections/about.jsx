@@ -98,7 +98,7 @@ function AboutCarousel() {
             </AnimatePresence>
 
             {/* Label */}
-            <div className="absolute bottom-5 left-0 right-0 flex justify-center z-10 pointer-events-none">
+            {/* <div className="absolute bottom-5 left-0 right-0 flex justify-center z-10 pointer-events-none">
                 <motion.span
                     key={`label-${current}`}
                     initial={{ opacity: 0, y: 8 }}
@@ -107,9 +107,8 @@ function AboutCarousel() {
                     transition={{ duration: 0.4, delay: 0.3 }}
                     className="bg-purple-deep/70 backdrop-blur-md text-gold text-xs font-barlow font-bold uppercase tracking-[0.25em] px-6 py-2 rounded-full border border-gold/20"
                 >
-                    {img.label}
                 </motion.span>
-            </div>
+            </div> */}
 
             {/* Prev / Next buttons */}
             <button
@@ -170,7 +169,7 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
                         viewport={{ once: true }}
-                        className="max-w-2xl text-base md:text-xl text-secondary/60 font-courier leading-relaxed"
+                        className="max-w-2xl text-base md:text-xl text-secondary/60 leading-relaxed text-justify"
                     >
                         Sanskriti'26 is more than an arts fest—it's a movement, a melting pot of
                         creativity, and a pulse of inspiration at <span className="text-gold">Mar Athanasius College of Engineering</span>.

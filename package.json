@@ -1,5 +1,5 @@
 {
-  "name": "sanskriti-25",
+  "name": "sanskriti-26",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "start": "set HOST=0.0.0.0 && vite"
   },
   "dependencies": {
     "clsx": "^2.1.1",

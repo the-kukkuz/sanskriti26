@@ -15,22 +15,25 @@ const fonts = [
 
 const sanskritiWords = ["SANSKRITI", "സംസ്കൃതി", "संस्कृति", "சமஸ்கிருதி", "సంస్కృతి", "ಸಂಸ್ಕೃತಿ"];
 
-const BackgroundRipple = () => {
+const BackgroundRipple = React.memo(() => {
     const [ripples, setRipples] = useState([]);
 
     useEffect(() => {
+        let isMounted = true;
         const addRipple = () => {
+            if (!isMounted) return;
             const newRipple = {
                 id: Date.now(),
                 x: Math.random() * 100,
                 y: Math.random() * 100,
                 word: sanskritiWords[Math.floor(Math.random() * sanskritiWords.length)]
             };
-            setRipples(prev => [...prev.slice(-12), newRipple]);
-            const nextDelay = 1500 + Math.random() * 2500;
+            setRipples(prev => [...prev.slice(-8), newRipple]);
+            const nextDelay = 3000 + Math.random() * 4000;
             setTimeout(addRipple, nextDelay);
         };
         addRipple();
+        return () => { isMounted = false; };
     }, []);
 
     return (
@@ -39,43 +42,66 @@ const BackgroundRipple = () => {
                 {ripples.map(r => (
                     <motion.div
                         key={r.id}
-                        initial={{ scale: 0.5, opacity: 0 }}
-                        animate={{ scale: [0.5, 3], opacity: [0, 0.4, 0] }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 12, ease: "easeOut" }}
-                        className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-center"
-                        style={{ left: `${r.x}%`, top: `${r.y}%`, willChange: "transform, opacity" }}
+                        className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
+                        style={{ left: `${r.x}%`, top: `${r.y}%` }}
                     >
-                        <div className="absolute w-64 h-64 bg-[radial-gradient(circle,rgba(250,205,4,0.15)_0%,transparent_70%)] rounded-full blur-3xl" />
-                        <span
-                            className="text-5xl md:text-8xl font-black text-gold/60 whitespace-nowrap blur-[1px] select-none tracking-widest drop-shadow-md z-0"
-                            style={{ fontFamily: "sans-serif" }}
+                        {/* Expanding rings */}
+                        {[1, 2, 3].map((i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ scale: 0.1, opacity: 0 }}
+                                animate={{ scale: [1, 4], opacity: [0, 0.5, 0] }}
+                                transition={{
+                                    duration: 8,
+                                    delay: i * 1.5,
+                                    ease: "easeOut",
+                                    repeat: Infinity
+                                }}
+                                className="absolute w-32 h-32 rounded-full border border-gold/20 shadow-[0_0_20px_rgba(250,205,4,0.1)]"
+                            />
+                        ))}
+
+                        {/* The word itself */}
+                        <motion.div
+                            initial={{ scale: 0.5, opacity: 0 }}
+                            animate={{ scale: [0.5, 1.2], opacity: [0, 0.3, 0] }}
+                            transition={{ duration: 15, ease: "linear" }}
+                            className="relative flex items-center justify-center"
                         >
-                            {r.word}
-                        </span>
+                            <div className="absolute w-48 h-48 bg-[radial-gradient(circle,rgba(250,205,4,0.1)_0%,transparent_70%)] rounded-full blur-3xl" />
+                            <span
+                                className="text-4xl md:text-7xl font-black text-gold/40 whitespace-nowrap blur-[2px] select-none tracking-widest z-0"
+                                style={{ fontFamily: "sans-serif" }}
+                            >
+                                {r.word}
+                            </span>
+                        </motion.div>
                     </motion.div>
                 ))}
             </AnimatePresence>
         </div>
     );
-};
+});
 
-const AnimatedLetter = ({ letter, delay, isMobile }) => {
+const AnimatedLetter = React.memo(({ letter, delay }) => {
     const [font, setFont] = useState(fonts[0]);
     const [isStabilized, setIsStabilized] = useState(false);
 
     useEffect(() => {
-        const stabilizationTime = 2500 + delay * 150;
+        const stabilizationTime = 2000 + delay * 120;
 
         const interval = setInterval(() => {
             const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
             setFont(randomFont);
-        }, 200 + Math.random() * 400);
+        }, 300 + Math.random() * 300);
 
         const preStabilizeTimeout = setTimeout(() => {
             clearInterval(interval);
             setFont("'Pacifico', cursive");
-        }, Math.max(0, stabilizationTime - 500));
+        }, Math.max(0, stabilizationTime - 400));
 
         const timeout = setTimeout(() => {
             setFont("'Rockybilly', sans-serif");
@@ -89,32 +115,25 @@ const AnimatedLetter = ({ letter, delay, isMobile }) => {
         };
     }, [delay]);
 
-    const getFontSize = () => {
-        if (!isStabilized) return "inherit";
-        if (isMobile) return "15px";
-        return "30px";
-    };
-
     return (
         <motion.span
-            initial={{ opacity: 0, scale: 0.5, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{
-                delay: isStabilized ? 0 : delay * 1.5,
-                duration: isStabilized ? 0.8 : 1,
-                ease: "easeOut"
+                delay: isStabilized ? 0 : delay * 1.2,
+                duration: isStabilized ? 0.6 : 0.8,
+                ease: "linear"
             }}
             style={{
                 fontFamily: font,
-                fontSize: getFontSize(),
-                transition: isStabilized ? "font-size 0.8s ease-out" : "none"
+                willChange: isStabilized ? "auto" : "font-family, opacity"
             }}
             className="inline-block"
         >
-            {letter}
+            {letter === " " ? "\u00A0" : letter}
         </motion.span>
     );
-};
+});
 
 
 
@@ -140,7 +159,7 @@ export default function Hero() {
         }
     }, [isInView]);
 
-    const word1 = "SANSKRITI";
+    const word1 = "Sanskriti";
     const word2 = "'26";
 
     return (
@@ -187,21 +206,17 @@ export default function Hero() {
                     {/* Main logo — stationary, centred, always on top of butterfly */}
                     <motion.div
                         layoutId="main-logo"
-                        initial={{
-                            x: -600 * (isMobile ? 0.4 : 1),
-                            y: -400 * (isMobile ? 0.4 : 1),
-                            rotate: -120,
-                            scale: 0.4,
-                            opacity: 0
-                        }}
+                        initial={{ opacity: 0, scale: 0.6, y: 40 }}
                         animate={{
-                            x: 0,
-                            y: 0,
-                            rotate: 0,
-                            scale: 1,
                             opacity: 1,
+                            scale: [0.6, 1.1, 1],
+                            y: [40, -10, 0]
                         }}
-                        transition={{ duration: revealTypo ? 1.5 : 4, ease: [0.16, 1, 0.3, 1] }}
+                        transition={{
+                            duration: 1,
+                            ease: "easeOut",
+                            delay: 0.5 // Snappy appearance after preloader ends
+                        }}
                         style={{ zIndex: 20, willChange: "transform" }}
                     >
                         <motion.img
@@ -228,16 +243,16 @@ export default function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="flex flex-col items-center gap-4 md:gap-8"
+                            className="flex flex-col items-center gap-10 md:gap-14"
                         >
                             {/* SANSKRITI '26 */}
-                            <div className="w-full max-w-[100vw] flex flex-nowrap justify-center text-[clamp(12px,7vw,4rem)] md:text-[clamp(4rem,9vw,10rem)] font-bold text-gold gap-x-0.5 md:gap-x-3 leading-none whitespace-nowrap px-2 md:px-4">
+                            <div className="w-full max-w-[100vw] flex flex-nowrap justify-center text-[clamp(0.7rem,3vw,1.1rem)] md:text-[clamp(1.3rem,3.5vw,2.2rem)] text-gold gap-x-0.5 md:gap-x-1.5 leading-none whitespace-nowrap px-2 md:px-4">
                                 {word1.split("").map((char, i) => (
-                                    <AnimatedLetter key={`${char}-${i}`} letter={char} delay={i * 0.08} isMobile={isMobile} />
+                                    <AnimatedLetter key={`${char}-${i}`} letter={char} delay={i * 0.08} />
                                 ))}
                                 <span className="mx-1 md:mx-3">&nbsp;</span>
                                 {word2.split("").map((char, i) => (
-                                    <AnimatedLetter key={`${char}-${i + 9}`} letter={char} delay={(i + 10) * 0.08} isMobile={isMobile} />
+                                    <AnimatedLetter key={`${char}-${i + 9}`} letter={char} delay={(i + 10) * 0.09} />
                                 ))}
                             </div>
 
@@ -245,15 +260,15 @@ export default function Hero() {
                             <motion.div
                                 initial={{ opacity: 0, letterSpacing: isMobile ? "0.05em" : "0.1em" }}
                                 animate={{ opacity: 1, letterSpacing: isMobile ? "0.2em" : "0.4em" }}
-                                transition={{ delay: 2.5, duration: 2, ease: "easeOut" }}
+                                transition={{ delay: 2.5, duration: 1, ease: "easeOut" }}
                                 className="flex items-center gap-4 md:gap-6"
                             >
                                 <div className="hidden md:block h-px w-16 bg-gradient-to-r from-transparent to-gold/40" />
                                 <h4
-                                    className="text-[10px] sm:text-lg md:text-xl font-bold font-advercase text-gold uppercase animate-text-shimmer"
+                                    className="text-[10px] sm:text-lg md:text-xl font-bold font-advercase text-gold animate-text-shimmer"
                                     style={{ letterSpacing: "inherit" }}
                                 >
-                                    #ARTBEYONDAESTHETICS
+                                    #ArtBeyondAesthetics
                                 </h4>
                                 <div className="hidden md:block h-px w-16 bg-gradient-to-l from-transparent to-gold/40" />
                             </motion.div>
@@ -263,7 +278,7 @@ export default function Hero() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 3.2, duration: 1 }}
-                                className="font-advercase font-medium text-[8px] sm:text-sm md:text-base text-secondary/40 tracking-[0.2em] uppercase"
+                                className="font-advercase font-medium text-[8px] sm:text-sm md:text-base text-secondary/40 tracking-[0.2em] uppercase animate-text-shimmer"
                             >
                                 MARCH 5 • 6 • 7 | MACE KOTHAMANGALAM
                             </motion.p>

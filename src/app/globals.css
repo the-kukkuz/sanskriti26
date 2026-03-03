@@ -13,14 +13,34 @@ body {
   color: #e5e7eb;
   overflow-x: hidden;
   font-family: 'Advercase', sans-serif;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
   -webkit-overflow-scrolling: touch;
   text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+html::-webkit-scrollbar {
+  display: none !important;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  display: none !important;
+}
+
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
 }
 
 @font-face {

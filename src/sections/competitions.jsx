@@ -88,7 +88,7 @@ export default function Competitions() {
                             <h3 className="item-heading mb-6 group-hover:tracking-normal transition-all duration-500">{competition.title}</h3>
 
                             <p
-                                className="text-secondary/50 mb-8 flex-grow font-advercase text-sm leading-relaxed"
+                                className="text-secondary/50 mb-8 flex-grow font-advercase text-sm leading-relaxed text-justify"
                                 dangerouslySetInnerHTML={{
                                     __html: competition.description
                                         .replace(/\*\*(.*?)\*\*/g, '<strong class="text-gold">$1</strong>')
