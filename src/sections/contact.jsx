@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 
 const ContactPage = () => {
     const contactPersons = [
-        { name: "Akash Jinish (Sanskriti Head)", phone: "+919072739035" },
-        { name: "Parvathy Gopan (Sanskriti Head)", phone: "+918129179168" },
-        { name: "Goutham P B (Convenor)", phone: "+918590394832" },
-        { name: "Suryalakshmi U S (Organising Secretary)", phone: "+918075897278" }
+        { name: "Anirudh Hari V V (Convenor)", phone: "+917560858754" },
+        { name: "Jasim Muhammed (Convenor)", phone: "+918848927537" },
+        { name: "Farida Backer (Organizing Secretary)", phone: "+919037457464" },
+        { name: "Adhwaith KP (Sanskriti Head)", phone: "+919383461487" }
     ];
 
     const socialMedia = [
@@ -53,7 +53,7 @@ const ContactPage = () => {
                         viewport={{ once: true }}
                         className="w-full lg:w-1/2 bg-purple-dark/10 p-10 md:p-16 rounded-[3rem] border border-gold/10 shadow-3xl flex flex-col backdrop-blur-3xl"
                     >
-                        <h2 className="item-heading mb-12">Inquiry Hub</h2>
+                        <h2 className="item-heading mb-12">Contacts</h2>
 
                         <div className="space-y-10 mb-16">
                             {contactPersons.map((person, index) => (
