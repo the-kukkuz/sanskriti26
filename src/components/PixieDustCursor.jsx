@@ -5,38 +5,51 @@ const PixieDustCursor = () => {
     const [particles, setParticles] = useState([]);
 
     useEffect(() => {
-        let lastPos = { x: 0, y: 0 };
+        let lastScrollY = window.scrollY;
 
-        const handleMouseMove = (e) => {
-            // Distance check to throttle particle creation
-            const dist = Math.hypot(e.clientX - lastPos.x, e.clientY - lastPos.y);
+        const createParticle = (x, y) => {
+            const newParticle = {
+                id: Math.random(),
+                x,
+                y,
+                size: Math.random() * 3 + 1, // Smaller, more delicate dust
+                color: Math.random() > 0.5 ? '#facd04' : '#ffffff', // Gold or White
+            };
 
-            if (dist > 25) { // Create particle only every 25px of movement
-                const newParticle = {
-                    id: Math.random(),
-                    x: e.clientX,
-                    y: e.clientY,
-                    size: Math.random() * 4 + 2,
-                    color: Math.random() > 0.5 ? '#facd04' : '#ffffff', // Gold or White
-                };
+            setParticles((prev) => [...prev.slice(-150), newParticle]); // Large pool for massive sparkle
+        };
 
-                setParticles((prev) => [...prev.slice(-8), newParticle]); // Reduced pool to 8 particles
-                lastPos = { x: e.clientX, y: e.clientY };
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            const scrollDist = Math.abs(currentScrollY - lastScrollY);
+
+            if (scrollDist > 2) { // Extremely sensitive for constant shimmer
+                // Dense burst of 20 particles across the screen
+                for (let i = 0; i < 20; i++) {
+                    createParticle(
+                        Math.random() * window.innerWidth,
+                        Math.random() * window.innerHeight
+                    );
+                }
+                lastScrollY = currentScrollY;
             }
         };
 
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     return (
-        <div className="fixed inset-0 pointer-events-none z-[9999] hidden md:block">
+        <div className="fixed inset-0 pointer-events-none z-[9999]">
             <AnimatePresence>
                 {particles.map((particle) => (
                     <motion.div
                         key={particle.id}
                         initial={{ opacity: 0.6, scale: 1 }}
-                        animate={{ opacity: 0, scale: 0, y: particle.y + 10 }}
+                        animate={{ opacity: 0, scale: 0, y: particle.y + 20 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         style={{
