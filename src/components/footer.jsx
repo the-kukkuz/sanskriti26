@@ -37,7 +37,7 @@ export default function Footer() {
                         </motion.div>
 
                         <div>
-                            <h2 className="text-gold font-rockybilly font-normal text-[12px] xs:text-[22px] tracking-[0.1em] xs:tracking-[0.2em] uppercase mb-2">SANSKRITI'26</h2>
+                            <h2 className="text-gold font-rockybilly font-normal text-[12px] xs:text-[22px] tracking-[0.1em] xs:tracking-[0.2em] uppercase mb-2">Sanskriti  '26</h2>
                             <p className="text-secondary/40 text-[10px] font-advercase tracking-[0.3em] uppercase">#ArtBeyondAesthetics</p>
                         </div>
 
@@ -104,7 +104,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 md:pt-12 border-t border-gold/5 flex flex-col items-center justify-center">
                     <p className="text-[11px] font-advercase uppercase tracking-[0.5em] text-gold/60 animate-text-shimmer text-gold-glow text-center">
-                        &#169; Sanskriti'26 Web Team | All Rights Reserved
+                        &#169; Sanskriti  '26 Web Team | All Rights Reserved
                     </p>
                 </div>
             </div>

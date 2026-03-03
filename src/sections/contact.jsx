@@ -64,12 +64,12 @@ const ContactPage = () => {
                                     transition={{ delay: index * 0.1 + 0.6 }}
                                     className="flex flex-col md:flex-row md:items-center justify-between border-b border-gold/5 pb-6 group"
                                 >
-                                    <p className="text-secondary/40 font-barlow font-bold uppercase tracking-[0.2em] group-hover:text-gold transition-all duration-500">
+                                    <p className="text-secondary/40 font-advercase font-bold uppercase tracking-[0.2em] group-hover:text-gold transition-all duration-500">
                                         {person.name}
                                     </p>
                                     <a
                                         href={`https://wa.me/${person.phone.replace(/[^0-9]/g, '')}`}
-                                        className="text-gold font-courier text-lg mt-3 md:mt-0 hover:text-white transition-all shadow-gold/20"
+                                        className="text-gold font-advercase text-lg mt-3 md:mt-0 hover:text-white transition-all shadow-gold/20"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >

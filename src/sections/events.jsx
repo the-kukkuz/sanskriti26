@@ -76,7 +76,7 @@ export default function Events() {
                                         whileInView={{ opacity: 1 }}
                                         transition={{ duration: 1, delay: 0.5 }}
                                         viewport={{ once: true }}
-                                        className="text-lg md:text-xl leading-relaxed font-advercase glide-shimmer-text text-justify"
+                                        className="text-lg md:text-xl leading-relaxed font-advercase glide-shimmer-text"
                                     >
                                         {event.event_description}
                                     </motion.p>
@@ -88,7 +88,7 @@ export default function Events() {
                                             transition={{ delay: 0.8 }}
                                             viewport={{ once: true }}
                                             href={event.event_link}
-                                            className="w-fit mx-auto md:mx-0 text-purple-deep font-bold font-barlow uppercase tracking-[0.3em] px-10 py-4 rounded-full bg-gold hover:bg-white hover:scale-105 transition-all duration-500 shadow-2xl shadow-gold/20"
+                                            className="w-fit mx-auto md:mx-0 text-purple-deep font-bold font-advercase uppercase tracking-[0.3em] px-10 py-4 rounded-full bg-gold hover:bg-white hover:scale-105 transition-all duration-500 shadow-2xl shadow-gold/20"
                                         >
                                             Dive into {event.event_name}
                                         </motion.a>

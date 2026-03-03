@@ -811,7 +811,7 @@ export const main_events = [
     {
         event_name: "ProShow",
         event_description: "Step into the Spotlight at Sanskriti’26 – A Symphony of Art At Sanskriti’26, Proshows weave music, dance, and storytelling into a breathtaking spectacle. Experience soul-stirring melodies, mesmerizing dance, and electrifying performances that ignite the stage. Each act is a masterpiece, capturing the essence of artistic brilliance and boundless energy.",
-        event_image: "/images/S26logoforposterswhitebg.png",
+        event_image: "/images/proshow.jpg",
     },
     {
         event_name: "Jalakam",
@@ -820,7 +820,7 @@ export const main_events = [
     },
     {
         event_name: "Drishyam",
-        event_description: "Step into the world of cinema at Sanskriti'26, where Drishyam serves as a time capsule, preserving moments through the magic of film. From the nostalgia of monochrome classics to the vibrancy of contemporary storytelling and the possibilities of the future, Drishyam showcases the power of film to capture cultural snapshots.",
+        event_description: "Step into the world of cinema at Sanskriti  '26, where Drishyam serves as a time capsule, preserving moments through the magic of film. From the nostalgia of monochrome classics to the vibrancy of contemporary storytelling and the possibilities of the future, Drishyam showcases the power of film to capture cultural snapshots.",
         event_image: "/images/S26logoforposterswhitebg.png",
     },
 ]

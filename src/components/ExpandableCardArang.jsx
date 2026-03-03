@@ -93,7 +93,7 @@ export function ExpandableCardArang({ events }) {
                                         </motion.h3>
                                         <motion.p
                                             layoutId={`description-${active.description}-${active.id}`}
-                                            className="text-secondary/80 font-courier mt-1"
+                                            className="text-secondary/80 font-advercase mt-1"
                                         >
                                             {active.description}
                                         </motion.p>
@@ -135,7 +135,7 @@ export function ExpandableCardArang({ events }) {
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         exit={{ opacity: 0 }}
-                                        className="text-secondary text-sm md:text-base leading-relaxed h-[30vh] overflow-y-auto pr-4 custom-scrollbar font-courier"
+                                        className="text-secondary text-sm md:text-base leading-relaxed h-[30vh] overflow-y-auto pr-4 custom-scrollbar font-advercase"
                                     >
                                         {typeof active.content === "function" ? active.content() : active.content}
                                     </motion.div>
@@ -180,7 +180,7 @@ export function ExpandableCardArang({ events }) {
                                 </motion.h3>
                                 <motion.p
                                     layoutId={`description-${card.description}-${card.id}`}
-                                    className="text-secondary/60 text-sm mt-2 font-courier"
+                                    className="text-secondary/60 text-sm mt-2 font-advercase"
                                 >
                                     {card.description}
                                 </motion.p>
@@ -188,7 +188,7 @@ export function ExpandableCardArang({ events }) {
                         </div>
                         <motion.button
                             layoutId={`cta-${card.title}-${card.id}`}
-                            className="w-full py-3 mt-6 text-sm rounded-xl font-bold bg-gold/10 text-gold border border-gold/30 group-hover:bg-gold group-hover:text-purple-dark transition-all duration-300 font-barlow uppercase tracking-widest"
+                            className="w-full py-3 mt-6 text-sm rounded-xl font-bold bg-gold/10 text-gold border border-gold/30 group-hover:bg-gold group-hover:text-purple-dark transition-all duration-300 font-advercase uppercase tracking-widest"
                         >
                             {card.ctaText}
                         </motion.button>

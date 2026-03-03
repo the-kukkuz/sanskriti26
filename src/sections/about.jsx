@@ -159,9 +159,9 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         viewport={{ once: true }}
-                        className="text-5xl sm:text-6xl md:text-8xl font-bold text-gold font-barlow uppercase tracking-tighter break-words hyphens-auto"
+                        className="text-5xl sm:text-6xl md:text-8xl font-bold text-gold uppercase tracking-tighter break-words hyphens-auto"
                     >
-                        About<br /><span className="text-white opacity-80 break-all sm:break-normal">Sanskriti'26</span>
+                        About<br /><span className="text-white opacity-80 break-all sm:break-normal">Sanskriti  '26</span>
                     </motion.h1>
 
                     <motion.p
@@ -169,9 +169,9 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
                         viewport={{ once: true }}
-                        className="max-w-2xl text-base md:text-xl text-secondary/60 leading-relaxed text-justify"
+                        className="max-w-2xl text-base md:text-xl text-secondary/60 leading-relaxed"
                     >
-                        Sanskriti'26 is more than an arts fest—it's a movement, a melting pot of
+                        Sanskriti  '26 is more than an arts fest—it's a movement, a melting pot of
                         creativity, and a pulse of inspiration at <span className="text-gold">Mar Athanasius College of Engineering</span>.
                         Here, tradition collides with innovation, and every brushstroke, beat, and
                         performance tells a story waiting to be heard.

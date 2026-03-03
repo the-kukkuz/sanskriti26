@@ -89,7 +89,7 @@ const Navbar = () => {
                                             <button
                                                 key={link.name}
                                                 onClick={() => handleNavigation(link.href)}
-                                                className="text-[9px] md:text-[11px] font-barlow font-bold text-gold/60 hover:text-gold uppercase tracking-[0.2em] transition-colors whitespace-nowrap"
+                                                className="text-[9px] md:text-[11px] font-advercase font-bold text-gold/60 hover:text-gold uppercase tracking-[0.2em] transition-colors whitespace-nowrap"
                                             >
                                                 {link.name}
                                             </button>
@@ -111,7 +111,7 @@ const Navbar = () => {
                                 className="w-7 h-7 md:w-10 md:h-10 object-contain animate-flap drop-shadow-[0_0_15px_rgba(250,205,4,0.4)]"
                             />
                             <span className="text-[6px] md:text-[8px] font-advercase font-bold text-gold uppercase tracking-[0.2em] mt-1 whitespace-nowrap">
-                                SANSKRITI'26
+                                Sanskriti  '26
                             </span>
                         </div>
 
@@ -130,7 +130,7 @@ const Navbar = () => {
                                             <button
                                                 key={link.name}
                                                 onClick={() => handleNavigation(link.href)}
-                                                className="text-[9px] md:text-[11px] font-barlow font-bold text-gold/60 hover:text-gold uppercase tracking-[0.2em] transition-colors whitespace-nowrap"
+                                                className="text-[9px] md:text-[11px] font-advercase font-bold text-gold/60 hover:text-gold uppercase tracking-[0.2em] transition-colors whitespace-nowrap"
                                             >
                                                 {link.name}
                                             </button>

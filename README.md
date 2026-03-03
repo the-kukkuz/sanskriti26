@@ -1,1 +1,1 @@
-Sanskriti'26: Official Website
+Sanskriti  '26: Official Website

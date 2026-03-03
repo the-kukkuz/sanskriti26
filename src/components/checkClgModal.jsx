@@ -16,22 +16,22 @@ const Modal = ({ isOpen, onClose, non_mace_link, mace_link }) => {
                     <a
                         href={mace_link}
                         onClick={onClose}
-                        className="group flex flex-col items-center justify-center px-6 py-4 bg-gold text-purple-dark rounded-2xl font-bold font-barlow uppercase tracking-widest hover:bg-white hover:scale-105 transition-all shadow-lg"
+                        className="group flex flex-col items-center justify-center px-6 py-4 bg-gold text-purple-dark rounded-2xl font-bold font-advercase uppercase tracking-widest hover:bg-white hover:scale-105 transition-all shadow-lg"
                     >
                         <span>Yes, I am</span>
-                        <span className="text-[10px] normal-case font-inter opacity-80 mt-1">Use college mail ID</span>
+                        <span className="text-[10px] normal-case font-advercase opacity-80 mt-1">Use college mail ID</span>
                     </a>
                     <a
                         href={non_mace_link}
                         onClick={onClose}
-                        className="px-6 py-4 bg-purple/20 border border-gold/30 text-gold rounded-2xl font-bold font-barlow uppercase tracking-widest hover:border-gold hover:bg-purple/10 transition-all"
+                        className="px-6 py-4 bg-purple/20 border border-gold/30 text-gold rounded-2xl font-bold font-advercase uppercase tracking-widest hover:border-gold hover:bg-purple/10 transition-all"
                     >
                         No, I'm a Guest
                     </a>
                 </div>
                 <button
                     onClick={onClose}
-                    className="mt-8 text-secondary/60 hover:text-white transition-colors font-inter text-sm flex items-center justify-center gap-2 mx-auto"
+                    className="mt-8 text-secondary/60 hover:text-white transition-colors font-advercase text-sm flex items-center justify-center gap-2 mx-auto"
                 >
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M18 6L6 18M6 6l12 12" />

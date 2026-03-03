@@ -29,7 +29,7 @@ export const ShimmerButton = React.forwardRef(
                     }
                 }
                 className={cn(
-                    "group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap px-8 py-4 text-white font-barlow font-bold uppercase tracking-widest [background:var(--bg)] [border-radius:var(--radius)]",
+                    "group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap px-8 py-4 text-white font-advercase font-bold uppercase tracking-widest [background:var(--bg)] [border-radius:var(--radius)]",
                     isActive
                         ? "border border-gold text-white drop-shadow-[0_0_15px_rgba(255,183,0,0.3)]"
                         : "border border-gold/20 text-secondary hover:border-gold/50",

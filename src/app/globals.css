@@ -20,6 +20,11 @@ body {
   scroll-behavior: smooth;
 }
 
+p {
+  text-align: justify;
+  font-family: 'Advercase', sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
   scrollbar-width: none !important;

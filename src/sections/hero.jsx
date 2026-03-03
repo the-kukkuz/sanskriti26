@@ -29,7 +29,7 @@ const BackgroundRipple = React.memo(() => {
                 word: sanskritiWords[Math.floor(Math.random() * sanskritiWords.length)]
             };
             setRipples(prev => [...prev.slice(-8), newRipple]);
-            const nextDelay = 3000 + Math.random() * 4000;
+            const nextDelay = 2000 + Math.random() * 3000;
             setTimeout(addRipple, nextDelay);
         };
         addRipple();
@@ -42,43 +42,20 @@ const BackgroundRipple = React.memo(() => {
                 {ripples.map(r => (
                     <motion.div
                         key={r.id}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
+                        initial={{ scale: 0.5, opacity: 0 }}
+                        animate={{ scale: [0.5, 2.5], opacity: [0, 0.3, 0] }}
                         exit={{ opacity: 0 }}
-                        className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
-                        style={{ left: `${r.x}%`, top: `${r.y}%` }}
+                        transition={{ duration: 15, ease: "linear" }}
+                        className="absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none text-center"
+                        style={{ left: `${r.x}%`, top: `${r.y}%`, willChange: "transform, opacity" }}
                     >
-                        {/* Expanding rings */}
-                        {[1, 2, 3].map((i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ scale: 0.1, opacity: 0 }}
-                                animate={{ scale: [1, 4], opacity: [0, 0.5, 0] }}
-                                transition={{
-                                    duration: 8,
-                                    delay: i * 1.5,
-                                    ease: "easeOut",
-                                    repeat: Infinity
-                                }}
-                                className="absolute w-32 h-32 rounded-full border border-gold/20 shadow-[0_0_20px_rgba(250,205,4,0.1)]"
-                            />
-                        ))}
-
-                        {/* The word itself */}
-                        <motion.div
-                            initial={{ scale: 0.5, opacity: 0 }}
-                            animate={{ scale: [0.5, 1.2], opacity: [0, 0.3, 0] }}
-                            transition={{ duration: 15, ease: "linear" }}
-                            className="relative flex items-center justify-center"
+                        <div className="absolute w-48 h-48 bg-[radial-gradient(circle,rgba(250,205,4,0.1)_0%,transparent_70%)] rounded-full blur-3xl" />
+                        <span
+                            className="text-4xl md:text-7xl font-black text-gold/40 whitespace-nowrap blur-[2px] select-none tracking-widest z-0"
+                            style={{ fontFamily: "sans-serif" }}
                         >
-                            <div className="absolute w-48 h-48 bg-[radial-gradient(circle,rgba(250,205,4,0.1)_0%,transparent_70%)] rounded-full blur-3xl" />
-                            <span
-                                className="text-4xl md:text-7xl font-black text-gold/40 whitespace-nowrap blur-[2px] select-none tracking-widest z-0"
-                                style={{ fontFamily: "sans-serif" }}
-                            >
-                                {r.word}
-                            </span>
-                        </motion.div>
+                            {r.word}
+                        </span>
                     </motion.div>
                 ))}
             </AnimatePresence>
@@ -246,7 +223,7 @@ export default function Hero() {
                             className="flex flex-col items-center gap-10 md:gap-14"
                         >
                             {/* SANSKRITI '26 */}
-                            <div className="w-full max-w-[100vw] flex flex-nowrap justify-center text-[clamp(0.7rem,3vw,1.1rem)] md:text-[clamp(1.3rem,3.5vw,2.2rem)] text-gold gap-x-0.5 md:gap-x-1.5 leading-none whitespace-nowrap px-2 md:px-4">
+                            <div className="w-full max-w-[100vw] flex flex-nowrap justify-center text-[clamp(1.2rem,6vw,2.2rem)] md:text-[clamp(2.5rem,8vw,5.5rem)] text-gold gap-x-0.5 md:gap-x-1.5 leading-none whitespace-nowrap px-2 md:px-4">
                                 {word1.split("").map((char, i) => (
                                     <AnimatedLetter key={`${char}-${i}`} letter={char} delay={i * 0.08} />
                                 ))}

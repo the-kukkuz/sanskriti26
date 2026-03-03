@@ -45,7 +45,7 @@ const FAQ = () => {
                                 className="w-full text-left p-8 md:p-10 flex justify-between items-center group"
                                 onClick={() => toggleFAQ(index)}
                             >
-                                <span className="text-xl md:text-2xl font-bold text-secondary/60 group-hover:text-gold transition-all duration-500 font-barlow tracking-tight pr-12">
+                                <span className="text-xl md:text-2xl font-bold text-secondary/60 group-hover:text-gold transition-all duration-500 font-advercase tracking-tight pr-12">
                                     {faq.question}
                                 </span>
                                 <motion.div
@@ -79,7 +79,7 @@ const FAQ = () => {
                                     >
                                         <div className="px-8 md:px-10 pb-10 pt-0">
                                             <div className="w-full h-px bg-gold/10 mb-8"></div>
-                                            <p className="text-secondary/60 font-advercase text-lg md:text-xl leading-relaxed text-justify">
+                                            <p className="text-secondary/60 font-advercase text-lg md:text-xl leading-relaxed">
                                                 {faq.answer}
                                             </p>
                                         </div>
@@ -92,7 +92,7 @@ const FAQ = () => {
                     {!showAll && (
                         <div className="w-full flex items-center justify-center pt-12">
                             <button
-                                className="group relative px-12 py-5 bg-purple-dark/20 border border-gold/30 text-gold font-bold font-barlow uppercase tracking-[0.4em] rounded-full hover:bg-gold hover:text-purple-deep hover:scale-105 transition-all duration-500 overflow-hidden"
+                                className="group relative px-12 py-5 bg-purple-dark/20 border border-gold/30 text-gold font-bold font-advercase uppercase tracking-[0.4em] rounded-full hover:bg-gold hover:text-purple-deep hover:scale-105 transition-all duration-500 overflow-hidden"
                                 onClick={() => setShowAll(true)}
                             >
                                 <span className="relative z-10 text-sm">Deep Reveal</span>

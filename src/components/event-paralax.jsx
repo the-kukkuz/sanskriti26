@@ -122,10 +122,10 @@ export const Header = () => {
         <div className="z-10 absolute flex flex-col items-center justify-center mx-auto py-5 md:py-28 px-4 w-full">
             <div className="max-w-7xl w-full">
                 <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-gold font-barlow uppercase tracking-tighter shadow-purple-deep break-words hyphens-auto">
-                    About<br /><span className="text-white opacity-80 break-all sm:break-normal">Sanskriti'26</span>
+                    About<br /><span className="text-white opacity-80 break-all sm:break-normal">Sanskriti  '26</span>
                 </h1>
-                <p className="max-w-2xl text-base md:text-xl mt-12 text-secondary/60 font-courier leading-relaxed">
-                    Sanskriti'26 is more than an arts fest—it's a movement, a melting pot of
+                <p className="max-w-2xl text-base md:text-xl mt-12 text-secondary/60 font-advercase leading-relaxed">
+                    Sanskriti  '26 is more than an arts fest—it's a movement, a melting pot of
                     creativity, and a pulse of inspiration at <span className="text-gold">Mar Athanasius College of Engineering</span>.
                     Here, tradition collides with innovation, and every brushstroke, beat, and
                     performance tells a story waiting to be heard.

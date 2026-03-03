@@ -17,7 +17,7 @@ export default function Arang() {
 
                 <div className="z-10 p-6 md:p-12 bg-purple/10 border border-gold/20 backdrop-blur-md mb-12 rounded-3xl w-full max-w-7xl shadow-2xl">
                     <h3 className="text-2xl md:text-4xl font-bold text-gold mb-6 font-barlow tracking-wide">GENERAL GUIDELINES</h3>
-                    <ul className="list-decimal list-inside space-y-4 text-secondary font-courier text-sm md:text-base leading-relaxed">
+                    <ul className="list-decimal list-inside space-y-4 text-secondary font-advercase text-sm md:text-base leading-relaxed">
                         <li>Participation is open for all engineering colleges. Everyone should bring the ID card of their respective colleges.</li>
                         <li>Both house-wise and individual participation are allowed.</li>
                         <li>No registration fees for MACEians.</li>
