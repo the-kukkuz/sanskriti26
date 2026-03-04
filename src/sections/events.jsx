@@ -48,15 +48,15 @@ export default function Events() {
                                 className={`flex flex-col ${index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-12 md:gap-24`}
                             >
                                 <motion.div
-                                    whileHover={{ scale: 1.02 }}
+                                    whileHover={event.event_name === "Drishyam" ? {} : { scale: 1.02 }}
                                     className="w-full md:w-2/5 flex items-center justify-center relative group"
                                 >
                                     {/* Subtle Glow */}
-                                    <div className="absolute inset-0 bg-gold/5 rounded-full blur-[100px] group-hover:bg-gold/10 transition-all duration-700"></div>
+                                    <div className={`absolute inset-0 bg-gold/5 rounded-full blur-[100px] transition-all duration-700 ${event.event_name !== "Drishyam" ? "group-hover:bg-gold/10" : ""}`}></div>
                                     <img
                                         src={event.event_image}
                                         alt={event.event_name}
-                                        className="w-full max-w-[300px] md:max-w-full relative z-10 drop-shadow-[0_0_50px_rgba(250,205,4,0.15)] group-hover:drop-shadow-[0_0_80px_rgba(250,205,4,0.3)] transition-all duration-700 animate-float"
+                                        className={`w-full max-w-[300px] md:max-w-full relative z-10 drop-shadow-[0_0_50px_rgba(250,205,4,0.15)] transition-all duration-700 animate-float ${event.event_name === "Drishyam" ? "white-outline pointer-events-none" : "group-hover:drop-shadow-[0_0_80px_rgba(250,205,4,0.3)]"} ${(event.event_name === "Arang" || event.event_name === "Alai") ? "logo-clarity" : ""}`}
                                     />
                                 </motion.div>
 

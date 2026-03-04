@@ -799,13 +799,13 @@ export const main_events = [
     {
         event_name: "Arang",
         event_description: "Step into the vibrant world of Arangu, where art knows no bounds. This VIBRANT EXTRAVAGANZA celebrates the perfect blend of traditional and contemporary art forms. Imagine a rich tapestry of music, dance, theater, and visual arts, woven together to create an unforgettable experience. From classical performances that showcase our cultural heritage to modern masterpieces that push the boundaries of creativity, Arangu is a true celebration of artistic expression.",
-        event_image: "/images/S26logoforposterswhitebg.png",
+        event_image: "/images/Arang.png",
         event_link: "/arang"
     },
     {
         event_name: "Alai",
         event_description: "An in‑college celebration where students take the stage and walls. ALAI gives everyone in the campus a chance to contribute, perform, design and exhibit — whether it’s a poster, a performance, a stall or a thrifted treasure. It’s our community’s own creative playground, made by and for MACEians.",
-        event_image: "/images/S26logoforposterswhitebg.png",
+        event_image: "/images/ALAI.png",
         event_link: "/alai",
     },
     {
@@ -816,11 +816,11 @@ export const main_events = [
     {
         event_name: "Jalakam",
         event_description: "Sanskriti is a celebration of art, passion, and togetherness, and Jaalakam is where its purest form comes to life. A space where creativity knows no bounds, Jaalakam brings forth talents that inspire and stories that touch the heart. It is a tribute to those whose spirit and joy make them special from others.",
-        event_image: "/images/S26logoforposterswhitebg.png",
+        event_image: "/images/jaalakam.png",
     },
     {
         event_name: "Drishyam",
         event_description: "Step into the world of cinema at Sanskriti  '26, where Drishyam serves as a time capsule, preserving moments through the magic of film. From the nostalgia of monochrome classics to the vibrancy of contemporary storytelling and the possibilities of the future, Drishyam showcases the power of film to capture cultural snapshots.",
-        event_image: "/images/S26logoforposterswhitebg.png",
+        event_image: "/images/Dhrishyam.png",
     },
 ]

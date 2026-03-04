@@ -153,6 +153,15 @@ html::-webkit-scrollbar {
   -webkit-backface-visibility: hidden;
 }
 
+.white-outline {
+  filter: drop-shadow(1.5px 1.5px 0 white) drop-shadow(-1.5px -1.5px 0 white) drop-shadow(-1.5px 1.5px 0 white) drop-shadow(1.5px -1.5px 0 white);
+}
+
+.logo-clarity {
+  image-rendering: -webkit-optimize-contrast;
+  filter: contrast(1.1) brightness(1.05);
+}
+
 /* Disable expensive filters on low-powered devices */
 @media (max-width: 767px) {
   .blur-3xl {
