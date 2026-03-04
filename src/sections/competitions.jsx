@@ -8,7 +8,7 @@ const competitions = [
         description: `The guitars are roaring, the drums are thundering, and the battle is about to erupt! **BANDWAR**, the fiercest showdown of **SANSKRITI’26**, presented by **MACE Music Club**, brings top bands together for an all-out musical war 💥. With electrifying solos 🎸, powerhouse vocals 🎤, and heart-pounding beats 🥁, only one will own the stage!  
 
 📍 **Venue:** OAT  
-📅 **Date:** 06-03-2026 
+📅 **Date:** 07-03-2026 
 
 🔥 Grab your spot, scream loud, and witness the madness of BANDWAR! 🎶🎸 Let the music do the talking and the stage set ablaze! 🎉🎤`,
         contact: [
@@ -38,7 +38,7 @@ const competitions = [
     {
         id: 3,
         title: 'Choreo Nite',
-        image: '/inter/Choreonight.jpg',
+        image: '/inter/Choreonite.jpg',
         description: `Get ready to own the floor! The Outclass Crew presents CHOREO NITE—the ultimate stage where rhythm meets raw energy. Whether you're all about the groove or the power moves, this is your moment to shine! 🌟
 
 Bring your fire, and battle it out for the ultimate glory.
