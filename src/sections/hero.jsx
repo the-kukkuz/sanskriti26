@@ -273,7 +273,7 @@ export default function Hero() {
                 />
             </div>
             {/* Easter Egg */}
-            <div className="absolute bottom-2 right-2 text-[1px] text-white/1 select-none pointer-events-none opacity-[0.1]" aria-hidden="true">
+            <div className="absolute bottom-2 right-2 text-[1px] text-blue/1 select-none pointer-events-none opacity-[0.1]" aria-hidden="true">
                 have a good sanskriti, Sian!
             </div>
         </section>

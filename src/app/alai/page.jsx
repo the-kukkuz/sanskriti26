@@ -2,12 +2,14 @@ import { ExpandableCardArang } from "@/components/ExpandableCardArang";
 import { Meteors } from "@/components/meteors";
 import { StarsBackground } from "@/components/stars-background";
 import Navbar from "@/components/Navbar";
+import BackButton from "@/components/BackButton";
 import { alaiEvents } from "@/data/events";
 
 export default function Alai() {
     return (
         <>
             <Navbar />
+            <BackButton />
             <section className="min-h-screen overflow-hidden w-full relative p-6 pt-28 md:p-20 md:pt-32 bg-purple-dark flex flex-col items-center justify-center">
                 <h1 className="z-10 section-heading !text-center !text-gold mb-10 w-full max-w-7xl font-barlow tracking-tighter">Alai '26</h1>
 

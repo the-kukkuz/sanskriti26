@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
     { question: "1. What is Sanskriti‘26?", answer: "Sanskriti‘26 is MACE’s annual arts festival, bringing together music, dance, drama, and endless creativity for an unforgettable celebration." },
-    { question: "2. When and where will Sanskriti‘26 take place?", answer: "The festival will be held on 6th, 7th and 8th of March 2026 at Mar Athanasius College of Engineering (MACE), with events happening across various venues on campus" },
+    { question: "2. When and where will Sanskriti‘26 take place?", answer: "The festival will be held on 5th, 6th and 7th of March 2026 at Mar Athanasius College of Engineering (MACE), with events happening across various venues on campus" },
     { question: "3. Who can participate in Sanskriti‘26?", answer: "Students from engineering colleges across India are welcome to showcase their talent and compete. Check specific event details for eligibility." },
     { question: "4. How can I register for events?", answer: "Event registrations can be done online through our official portal or via the registration links provided in each event card." },
     { question: "5. Is there a fee for participation?", answer: "Registration fees vary by event. Please check the individual event cards for specific details." },
@@ -95,7 +95,7 @@ const FAQ = () => {
                                 className="group relative px-12 py-5 bg-purple-dark/20 border border-gold/30 text-gold font-bold font-advercase uppercase tracking-[0.4em] rounded-full hover:bg-gold hover:text-purple-deep hover:scale-105 transition-all duration-500 overflow-hidden"
                                 onClick={() => setShowAll(true)}
                             >
-                                <span className="relative z-10 text-sm">Deep Reveal</span>
+                                <span className="relative z-10 text-sm">Load More</span>
                                 <div className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500 -z-10"></div>
                             </button>
                         </div>

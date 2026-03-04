@@ -647,7 +647,7 @@ export const main_events = [
     },
     {
         event_name: "Drishyam",
-        event_description: "Step into the world of cinema at Sanskriti  '26, where Drishyam serves as a time capsule, preserving moments through the magic of film. From the nostalgia of monochrome classics to the vibrancy of contemporary storytelling and the possibilities of the future, Drishyam showcases the power of film to capture cultural snapshots.",
+        event_description: "Drishyam returns not merely as a film festival but as a living canvas of emotions, revolutions, and dreams captured through the lens of cinema.From the timeless beauty of black-and-white classics to the bold pulse of contemporary storytelling, Drishyam'26 celebrates the evolution of film as memory, movement, and meaning. Each frame becomes a time capsule, preserving laughter, resistance, love, identity, and imagination while narratives unfold across generations-questioning, comforting, and challenging us in equal measure. Here, cinema transforms into history, and history finds new life through cinema. More than a celebration of screenings and spotlights, Drishyam'26 stands as a tribute to storytellers-the directors, dreamers, writers, rebels, and visionaries who turn silence into dialogue and fleeting moments into lasting legacy. This is not just a festival; it is a space where the past lingers, the present speaks, and the future waits to be directed.",
         event_image: "/images/Dhrishyam.png",
     },
 ]
