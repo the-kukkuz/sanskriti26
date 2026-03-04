@@ -6,8 +6,8 @@ export const singleEvents = [
         reg_fees: "Rs. 150/-",
         src: "/Arang/Individual/mohiniyattam.jpg",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/VSXVxmp96D1TPYqf6",
-        mace_link: "https://forms.gle/yBbWauXVdhifWtD9A",
+        non_mace_link: "https://bit.ly/Mohiniyattam",
+        mace_link: "https://bit.ly/Mohiniyattam",
         content: () => {
             return (
                 <ul>
@@ -27,8 +27,8 @@ export const singleEvents = [
         reg_fees: "Rs. 150/-",
         src: "/Arang/Individual/bharathanatyam.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/zXbsDQsEEz68qXkQ9",
-        mace_link: "https://forms.gle/zXbsDQsEEz68qXkQ9",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSf42rBgV-vZ3OETlmEJFCU3hTC87nqYxIP_z6zC2ylozV2FlA/viewform",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSf42rBgV-vZ3OETlmEJFCU3hTC87nqYxIP_z6zC2ylozV2FlA/viewform",
         content: () => {
             return (
                 <ul>
@@ -49,8 +49,8 @@ export const singleEvents = [
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/extempore_malayalam.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/5NUKHtjPskQwNNbs7",
-        mace_link: "https://forms.gle/rV12n97xfdtQXKQh8",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLScVsyseCTfzSnmpbQ3upmNLbWdHOtUDv4phUUxDFdw_8wa45Q/viewform",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSeNYYYI7ebeeUzwNuLThkERajvPyyiH7UffDeQjmeYcFJfijA/viewform",
         content: () => {
             return (
                 <ul>
@@ -72,8 +72,8 @@ export const singleEvents = [
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/extempore_english.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/VbymMvCCVwEdUqeRA",
-        mace_link: "https://forms.gle/d4xJHBC5AU1KwKWB6",
+        non_mace_link: "https://forms.gle/nQXUSTaQrUqrSGCG7",
+        mace_link: "https://forms.gle/nQXUSTaQrUqrSGCG7",
         content: () => {
             return (
                 <ul>
@@ -95,8 +95,8 @@ export const singleEvents = [
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/light_music.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/P718Z1BZ6gfqJ8MHA",
-        mace_link: "https://forms.gle/vH7L3awXz4DLVrTe9",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLScG9txLidb120O6VbN39Cmi7IleFq-IiQ3Y-tVVACmZ3me3iA/viewform",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLScG9txLidb120O6VbN39Cmi7IleFq-IiQ3Y-tVVACmZ3me3iA/viewform",
         content: () => {
             return (
                 <ul>
@@ -119,8 +119,8 @@ export const singleEvents = [
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/shastryasangeedham.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/Vd71U2PXiDWdT6HZ6",
-        mace_link: "https://forms.gle/VVJW5ePcVMZqG9cHA",
+        non_mace_link: "https://forms.gle/eJuQ3cPbA5mVm7VL9",
+        mace_link: "https://forms.gle/eJuQ3cPbA5mVm7VL9",
         content: () => {
             return (
                 <ul>
@@ -142,8 +142,8 @@ export const singleEvents = [
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/anchoring.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/6RBZoJbs8AAihKaJ7",
-        mace_link: "https://forms.gle/6RBZoJbs8AAihKaJ7",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLScscICZ2YaeoYqcb8XIy90sKfMFZmPXT4IbMiuEKAxe0CVSJw/viewform?pli=1",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLScscICZ2YaeoYqcb8XIy90sKfMFZmPXT4IbMiuEKAxe0CVSJw/viewform?pli=1",
         content: () => {
             return (
                 <ul>
@@ -159,14 +159,34 @@ export const singleEvents = [
         },
     },
     {
+        id: 8,
+        description: "1K Prize Pool",
+        title: "Monoact",
+        reg_fees: "Rs. 100/-",
+        src: "/Arang/Individual/Mono_Act.png",
+        ctaText: "Register",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSdvuLaorPHr4pkKBKkXfzPEGelzTmmXMRoFgYV-CBTCbJG4Ig/viewform?pli=1",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSdvuLaorPHr4pkKBKkXfzPEGelzTmmXMRoFgYV-CBTCbJG4Ig/viewform?pli=1",
+        content: () => {
+            return (
+                <ul>
+                    <li>Participation is open for all engineering colleges.</li>
+                    <li>Time allowed is 5 minutes.</li>
+                    <li>Judgment will be based on qualities like ability to act, clarity of language, literary expression, originality, humor, general impression, etc.</li>
+                    <li>Decision of the judges will be final and cannot be appealed.</li>
+                </ul>
+            );
+        },
+    },
+    {
         id: 11,
         description: "1K Prize Pool",
         title: "Western solo",
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/western_solo.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/PDZPdCkvG73qGrrz5",
-        mace_link: "https://forms.gle/W2SzwUKFAh4SX4ot5",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSfeiDHHMIB7aq7UM_ByZBXuPSikJ-m5j1CgT8TY3kf4_Rr0iQ/viewform",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSfeiDHHMIB7aq7UM_ByZBXuPSikJ-m5j1CgT8TY3kf4_Rr0iQ/viewform",
         content: () => {
             return (
                 <ul>
@@ -187,8 +207,8 @@ export const singleEvents = [
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/Recitation-english.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/1NuDN2jACBEgUN4T9",
-        mace_link: "https://forms.gle/ePnR8EGpERPPRCxG7",
+        non_mace_link: "https://forms.gle/6JYmt1ur6wjUuoWv9",
+        mace_link: "https://forms.gle/6JYmt1ur6wjUuoWv9",
         content: () => {
             return (
                 <ul>
@@ -209,8 +229,8 @@ export const singleEvents = [
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/recitation-malayalam.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/p6VV2rAi19sh46cEA",
-        mace_link: "https://forms.gle/Nq6M8v3YUi2osij56",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSeepC8JPTpvV7BEWmBuubFYtmn_spmyncEIajGev7UQCA8rQ/viewform",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSeepC8JPTpvV7BEWmBuubFYtmn_spmyncEIajGev7UQCA8rQ/viewform",
         content: () => {
             return (
                 <ul>
@@ -231,8 +251,8 @@ export const singleEvents = [
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/mappilapattu.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/sUVqpFnzzQruGhx59",
-        mace_link: "https://forms.gle/sUVqpFnzzQruGhx59",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLScxwBpkgdg9Xu_D6a4mMFwV6gZGKQ6OsDiDjcRIzP4zHTuceQ/viewform?pli=1",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLScxwBpkgdg9Xu_D6a4mMFwV6gZGKQ6OsDiDjcRIzP4zHTuceQ/viewform?pli=1",
         content: () => {
             return (
                 <ul>
@@ -257,8 +277,8 @@ export const groupEvents = [
         reg_fees: "Rs. 600/-",
         src: "/Arang/Group/group_dance.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/QFzkqJ9v4Tzvcuo66",
-        mace_link: "https://forms.gle/TnEog1UuokCtgPCv8",
+        non_mace_link: "https://forms.gle/SH4RePLCEMghDkx17",
+        mace_link: "https://forms.gle/SH4RePLCEMghDkx17",
         content: () => {
             return (
                 <ul>
@@ -282,8 +302,8 @@ export const groupEvents = [
         reg_fees: "Rs. 800/-",
         src: "/Arang/Group/semiclassical_group.webp",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/5uh7AzGLkrDkRB3F9",
-        mace_link: "https://forms.gle/4NwB9kC1gxoJ1Kc39",
+        non_mace_link: "https://forms.gle/roWAqYH2qvzLkfWt5",
+        mace_link: "https://forms.gle/roWAqYH2qvzLkfWt5",
         content: () => {
             return (
                 <ul>
@@ -310,8 +330,8 @@ export const groupEvents = [
         reg_fees: "Rs. 800/-",
         src: "/Arang/Group/thiruvathira.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/nP485ufafbdXWZUj6",
-        mace_link: "https://forms.gle/391Cobw12VxnwipKA",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLScEll8tjq_i6PxxiGRM4OcQptAF4VUZu9FPjM03Y-IP-o5KZQ/viewform",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLScEll8tjq_i6PxxiGRM4OcQptAF4VUZu9FPjM03Y-IP-o5KZQ/viewform",
         content: () => {
             return (
                 <ul>
@@ -343,8 +363,8 @@ export const groupEvents = [
         reg_fees: "Rs. 800/-",
         src: "/Arang/Group/oppana1.webp",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/F132Z3xZy15c5afN8",
-        mace_link: "https://forms.gle/58ayGfpdUAKyy7vF6",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSd9X1WNTPwECzMG4emJppezkLnC0zcpoXz_v55WjlBCrLv4VA/viewform",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSd9X1WNTPwECzMG4emJppezkLnC0zcpoXz_v55WjlBCrLv4VA/viewform",
         content: () => {
             return (
                 <ul>
@@ -366,8 +386,8 @@ export const groupEvents = [
         reg_fees: "Rs. 600/-",
         src: "/Arang/Group/group_song1.webp",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/nqhdwWfGKcGU86TEA",
-        mace_link: "https://forms.gle/wHX1b2AAiuMJMWfJ7",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSdRTfxeHSAGwHcitjLQXHbH8hw3yjGLupXqh7LFSV84ZuFV0g/viewform",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSdRTfxeHSAGwHcitjLQXHbH8hw3yjGLupXqh7LFSV84ZuFV0g/viewform",
         content: () => {
             return (
                 <ul>
@@ -391,8 +411,8 @@ export const groupEvents = [
         reg_fees: "Rs. 600/-",
         src: "/Arang/Group/group_song1.webp",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/nqhdwWfGKcGU86TEA",
-        mace_link: "https://forms.gle/wHX1b2AAiuMJMWfJ7",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSdKWTUoDexBAWjc84_0g6g4Y8d858KLn5NOLwufc5V4EVvrxg/viewform",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSdKWTUoDexBAWjc84_0g6g4Y8d858KLn5NOLwufc5V4EVvrxg/viewform",
         content: () => {
             return (
                 <ul>
@@ -416,8 +436,8 @@ export const groupEvents = [
         reg_fees: "Rs. 800/-",
         src: "/Arang/Group/margamkali.webp",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/daR9wCPdwt4nC3fu6",
-        mace_link: "https://forms.gle/13gLLtRKpWG8KL4Y7",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSdGinNNmIbxzcKl6nYree8Z6ZWEbaTuq85lrJrmh96oSOXrRQ/viewform?pli=1",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSdGinNNmIbxzcKl6nYree8Z6ZWEbaTuq85lrJrmh96oSOXrRQ/viewform?pli=1",
         content: () => {
             return (
                 <ul>
@@ -439,8 +459,8 @@ export const groupEvents = [
         reg_fees: "Rs. 600/-",
         src: "/Arang/Group/nadanpattu.webp",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/HZKvepAnsaBnrCTJ9",
-        mace_link: "https://forms.gle/XxGjcquLikkkbgP38",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLScQ1uNUOryS0lYVtcwld9B1SLCgF8ETFYDLsIxnu8iksb5dng/viewform",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLScQ1uNUOryS0lYVtcwld9B1SLCgF8ETFYDLsIxnu8iksb5dng/viewform",
         content: () => {
             return (
                 <ul>
@@ -457,14 +477,37 @@ export const groupEvents = [
         },
     },
     {
+        id: 7,
+        description: "4.5K Prize Pool",
+        title: "Vanchippattu",
+        reg_fees: "Rs. 600/-",
+        src: "/Arang/Group/vanjipattu.jpg",
+        ctaText: "Register",
+        non_mace_link: "https://bit.ly/4r575yL",
+        mace_link: "https://bit.ly/4r575yL",
+        content: () => {
+            return (
+                <ul>
+                    <li>Participation is open for all engineering colleges.</li>
+                    <li>A maximum of 10 people can participate.</li>
+                    <li>Out of 10 people, one will be the \"Thaalakkaaran\" and one will be the lead singer (\"Thalappattu\"), while the remaining 8 people will be supporting singers.</li>
+                    <li>The performance can be in one of the following styles: Veppupattu, Kuttanadan style, or Aranmula style.</li>
+                    <li>When registering the team, the style in which the song will be presented must be specified in advance.</li>
+                    <li>Judgment will be based on rhythm, tune, synchronization with the singers, expression, outfit, and overall presentation.</li>
+                    <li>Decisions of the judges will be final and cannot be appealed.</li>
+                </ul>
+            );
+        },
+    },
+    {
         id: 10,
         description: "2.5K Prize Pool",
         title: "Mime",
         reg_fees: "Rs. 600/-",
         src: "/Arang/Group/Mime.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/Qv8ggu89v8Ny5sYH6",
-        mace_link: "https://forms.gle/dWrfYverej4zderG7",
+        non_mace_link: "https://forms.gle/fDebdGauSjcMaX7s8",
+        mace_link: "https://forms.gle/fDebdGauSjcMaX7s8",
         content: () => {
             return (
                 <ul>
