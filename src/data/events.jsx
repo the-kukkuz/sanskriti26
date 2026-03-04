@@ -647,7 +647,12 @@ export const main_events = [
     },
     {
         event_name: "Drishyam",
-        event_description: "Drishyam returns not merely as a film festival but as a living canvas of emotions, revolutions, and dreams captured through the lens of cinema.From the timeless beauty of black-and-white classics to the bold pulse of contemporary storytelling, Drishyam'26 celebrates the evolution of film as memory, movement, and meaning. Each frame becomes a time capsule, preserving laughter, resistance, love, identity, and imagination while narratives unfold across generations-questioning, comforting, and challenging us in equal measure. Here, cinema transforms into history, and history finds new life through cinema. More than a celebration of screenings and spotlights, Drishyam'26 stands as a tribute to storytellers-the directors, dreamers, writers, rebels, and visionaries who turn silence into dialogue and fleeting moments into lasting legacy. This is not just a festival; it is a space where the past lingers, the present speaks, and the future waits to be directed.",
+        event_description: "Drishyam returns as a living canvas of cinematic emotions and dreams. From classics to contemporary storytelling, it celebrates the evolution of film as memory and movement. A tribute to visionaries, Drishyam'26 is where history finds new life and the future is directed.",
         event_image: "/images/Dhrishyam.png",
     },
-]
+    {
+        event_name: "Film Makers Round Table",
+        event_description: "The Filmmakers Round Table brings together visionary minds to explore cinematic craft and storytelling. A space for dialogue and discovery, it invites creators to share insights and inspire the next generation. Join the conversation where the art of cinema is celebrated through collective vision.",
+        event_image: "/images/RoundTable.jpg",
+    },
+];
