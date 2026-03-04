@@ -37,7 +37,7 @@ const competitions = [
     // },
     {
         id: 3,
-        title: 'Choreonight',
+        title: 'Choreo Nite',
         image: '/inter/Choreonight.jpg',
         description: `Get ready to own the floor! The Outclass Crew presents CHOREO NITE—the ultimate stage where rhythm meets raw energy. Whether you're all about the groove or the power moves, this is your moment to shine! 🌟
 
@@ -90,7 +90,7 @@ export default function Competitions() {
                                 <div className="absolute top-6 right-6 bg-gold text-purple-deep px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] font-advercase shadow-lg">LIVE '26</div>
                             </div>
 
-                            <h3 className="item-heading mb-6 group-hover:tracking-normal transition-all duration-500">{competition.title}</h3>
+                            <h3 className="item-heading mb-6 group-hover:tracking-normal transition-all duration-500 px-4">{competition.title}</h3>
 
                             <p
                                 className="text-secondary/50 mb-8 flex-grow font-advercase text-sm leading-relaxed"
