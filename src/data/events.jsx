@@ -27,8 +27,8 @@ export const singleEvents = [
         reg_fees: "Rs. 150/-",
         src: "/Arang/Individual/bharathanatyam.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/jYpg2zFjZVYrPY2W6",
-        mace_link: "https://forms.gle/8fVjJZ8q8p9os8ERA",
+        non_mace_link: "https://forms.gle/zXbsDQsEEz68qXkQ9",
+        mace_link: "https://forms.gle/zXbsDQsEEz68qXkQ9",
         content: () => {
             return (
                 <ul>
@@ -183,8 +183,8 @@ export const singleEvents = [
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/anchoring.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/hEUvszLRhvUx5ajQ9",
-        mace_link: "https://forms.gle/JrEiXDrZxsGLM2vP7",
+        non_mace_link: "https://forms.gle/6RBZoJbs8AAihKaJ7",
+        mace_link: "https://forms.gle/6RBZoJbs8AAihKaJ7",
         content: () => {
             return (
                 <ul>
@@ -292,8 +292,8 @@ export const singleEvents = [
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/mappilapattu.png",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/sL8yFVoYhuRaT5gC6",
-        mace_link: "https://forms.gle/DBnnSj5m4VCkdQSx8",
+        non_mace_link: "https://forms.gle/sUVqpFnzzQruGhx59",
+        mace_link: "https://forms.gle/sUVqpFnzzQruGhx59",
         content: () => {
             return (
                 <ul>
@@ -584,8 +584,8 @@ export const groupEvents = [
         reg_fees: "Rs. 600/-",
         src: "/Arang/Group/vanjipattu.jpg",
         ctaText: "Register",
-        non_mace_link: "https://forms.gle/oAVWeS1u6ibuxqLP9",
-        mace_link: "https://forms.gle/JJpXiC7DWL5Fkz6FA",
+        non_mace_link: "https://forms.gle/GahBoHvi9JFxBab67",
+        mace_link: "https://forms.gle/GahBoHvi9JFxBab67",
         content: () => {
             return (
                 <ul>
