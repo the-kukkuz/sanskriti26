@@ -483,8 +483,8 @@ export const groupEvents = [
         reg_fees: "Rs. 600/-",
         src: "/Arang/Group/vanjipattu.jpg",
         ctaText: "Register",
-        non_mace_link: "https://bit.ly/4r575yL",
-        mace_link: "https://bit.ly/4r575yL",
+        non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSdZY0K5VF5uXuabgh-euemvJdBvRLldeJoo97cTG7Nnq-YA6g/viewform",
+        mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSdZY0K5VF5uXuabgh-euemvJdBvRLldeJoo97cTG7Nnq-YA6g/viewform",
         content: () => {
             return (
                 <ul>
