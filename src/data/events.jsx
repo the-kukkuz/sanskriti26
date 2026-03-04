@@ -1,8 +1,8 @@
 export const singleEvents = [
     {
         id: 1,
-        description: "6K Prize Pool",
-        title: "മോഹിനിയാട്ടം",
+        description: "4K Prize Pool",
+        title: "Mohiniyattam",
         reg_fees: "Rs. 150/-",
         src: "/Arang/Individual/mohiniyattam.jpg",
         ctaText: "Register",
@@ -22,8 +22,8 @@ export const singleEvents = [
     },
     {
         id: 2,
-        description: "6K Prize Pool",
-        title: "ഭരതനാട്യം",
+        description: "4K Prize Pool",
+        title: "Bharathanatyam",
         reg_fees: "Rs. 150/-",
         src: "/Arang/Individual/bharathanatyam.png",
         ctaText: "Register",
@@ -45,7 +45,7 @@ export const singleEvents = [
     {
         id: 3,
         description: "1K Prize Pool",
-        title: "Extempore - Malayalam",
+        title: "Extempore (Mal)",
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/extempore_malayalam.png",
         ctaText: "Register",
@@ -68,7 +68,7 @@ export const singleEvents = [
     {
         id: 4,
         description: "1K Prize Pool",
-        title: "Extempore - English",
+        title: "Extempore (Eng)",
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/extempore_english.png",
         ctaText: "Register",
@@ -89,30 +89,9 @@ export const singleEvents = [
         },
     },
     {
-        id: 5,
-        description: "6K Prize Pool",
-        title: "കുച്ചിപ്പുടി",
-        reg_fees: "Rs. 150/-",
-        src: "/Arang/Individual/kuchipudi.png",
-        ctaText: "Register",
-        non_mace_link: "https://forms.gle/TJSa8FA99wvU3Drx9",
-        mace_link: "https://forms.gle/rHnFyfYu4Fc1CAN88",
-        content: () => {
-            return (
-                <ul>
-                    <li>Participation is open for all engineering colleges.</li>
-                    <li>Each participant will be allowed up to 15 minutes including time for preparation, exit etc. (10 minutes for performance and 5 minutes for stage preparation)</li>
-                    <li>Judgment will be based basically on the qualities like Tal, Technique, Rhythm, Abhinaya or expression, costume, footwork, general impression etc.</li>
-                    <li>Participants should submit audio as CD/Pendrive/Phone with AUX output to the event coordinators before the start of the event.</li>
-                    <li>Decision of the judges will be final and cannot be appealed.</li>
-                </ul>
-            );
-        },
-    },
-    {
         id: 6,
         description: "1K Prize Pool",
-        title: "Light Music",
+        title: "Light music",
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/light_music.png",
         ctaText: "Register",
@@ -136,7 +115,7 @@ export const singleEvents = [
     {
         id: 7,
         description: "1K Prize Pool",
-        title: "Carnatic Music / ശാസ്ത്രീയസംഗീതം",
+        title: "Classical music",
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/shastryasangeedham.png",
         ctaText: "Register",
@@ -151,26 +130,6 @@ export const singleEvents = [
                     <li>Maximum time allotted for the performance is 10 minutes.</li>
                     <li>Sufficient thought and care must be exercised in the choice of raga and composition.</li>
                     <li>Judgment will be based on swara, tal, selection of raga, composition, and general impression.</li>
-                    <li>Decision of the judges will be final and cannot be appealed.</li>
-                </ul>
-            );
-        },
-    },
-    {
-        id: 8,
-        description: "1K Prize Pool",
-        title: "Monoact",
-        reg_fees: "Rs. 100/-",
-        src: "/Arang/Individual/Mono_Act.png",
-        ctaText: "Register",
-        non_mace_link: "https://forms.gle/eqPZFe36zoimYVSh6",
-        mace_link: "https://forms.gle/CNJYBqv5BjiLvSue7",
-        content: () => {
-            return (
-                <ul>
-                    <li>Participation is open for all engineering colleges.</li>
-                    <li>Time allowed is 5 minutes.</li>
-                    <li>Judgment will be based on qualities like ability to act, clarity of language, literary expression, originality, humor, general impression, etc.</li>
                     <li>Decision of the judges will be final and cannot be appealed.</li>
                 </ul>
             );
@@ -200,29 +159,9 @@ export const singleEvents = [
         },
     },
     {
-        id: 10,
-        description: "1K Prize Pool",
-        title: "Standup Comedy",
-        reg_fees: "Rs. 100/-",
-        src: "/Arang/Individual/stand_up_comedy.png",
-        ctaText: "Register",
-        non_mace_link: "https://forms.gle/35EqqSgVKXxhXAwQ6",
-        mace_link: "https://forms.gle/o48b9UmTa79Tc19x8",
-        content: () => {
-            return (
-                <ul>
-                    <li>Participation is open for all engineering colleges.</li>
-                    <li>No participant can point out any individual or religion in any way, and any dual-meaning obscene content is strictly not allowed.</li>
-                    <li>Participants will be judged on the basis of content, fluency, spontaneity, presentation, and sense of humor.</li>
-                    <li>Decision of the judges will be final and cannot be appealed.</li>
-                </ul>
-            );
-        },
-    },
-    {
         id: 11,
         description: "1K Prize Pool",
-        title: "Western Vocal Solo",
+        title: "Western solo",
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/western_solo.png",
         ctaText: "Register",
@@ -244,7 +183,7 @@ export const singleEvents = [
     {
         id: 12,
         description: "1K Prize Pool",
-        title: "Recitation - English",
+        title: "Recitation (Eng)",
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/Recitation-english.png",
         ctaText: "Register",
@@ -266,7 +205,7 @@ export const singleEvents = [
     {
         id: 13,
         description: "1K Prize Pool",
-        title: "Recitation - Malayalam",
+        title: "Recitation (Mal)",
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/recitation-malayalam.png",
         ctaText: "Register",
@@ -288,7 +227,7 @@ export const singleEvents = [
     {
         id: 14,
         description: "1K Prize Pool",
-        title: "Mappilappattu",
+        title: "Mappilapattu",
         reg_fees: "Rs. 100/-",
         src: "/Arang/Individual/mappilapattu.png",
         ctaText: "Register",
@@ -308,97 +247,13 @@ export const singleEvents = [
             );
         },
     },
-    {
-        id: 15,
-        description: "1K Prize Pool",
-        title: "Drums Solo",
-        reg_fees: "Rs. 100/-",
-        src: "/Arang/Individual/drums.png",
-        ctaText: "Register",
-        non_mace_link: "https://forms.gle/STCmT3qvAAbkSnS99",
-        mace_link: "https://forms.gle/c5RES8XRQj1y7a2r5",
-        content: () => {
-            return (
-                <ul>
-                    <li>Participation is open for all engineering colleges.</li>
-                    <li>Individual event (no accompanists are allowed).</li>
-                    <li>Specified instrument for Percussion Western is Drums.</li>
-                    <li>Performance must be for a maximum of 5 minutes.</li>
-                    <li>Decision of the judges will be final and cannot be appealed.</li>
-                </ul>
-            );
-        },
-    },
-    {
-        id: 16,
-        description: "1K Prize Pool",
-        title: "String Solo",
-        reg_fees: "Rs. 100/-",
-        src: "/Arang/Individual/string-solo.png",
-        ctaText: "Register",
-        non_mace_link: "https://forms.gle/XNiL4ubCMxL5YBiN7",
-        mace_link: "https://forms.gle/SsdnApPUoC5teAy2A",
-        content: () => {
-            return (
-                <ul>
-                    <li>Participation is open for all engineering colleges.</li>
-                    <li>This is a solo event.</li>
-                    <li>Time Limit: 5 mins, any extensions in time will result in direct disqualification.</li>
-                    <li>Any stringed instrument shall be used for solo performance.</li>
-                    <li>Solos of famous songs can be played.</li>
-                    <li>Original composition shall be encouraged and given more weightage.</li>
-                    <li>A combination of riffs and solos can be played.</li>
-                    <li>Distortion is not allowed. No processing foot pedals.</li>
-                    <li>Judging criteria will be based on solo only.</li>
-                    <li>Judging Criteria:</li>
-                    <ul>
-                        <li>Tempo</li>
-                        <li>Clarity of Notes</li>
-                        <li>Difficulty of piece</li>
-                        <li>Dynamics</li>
-                    </ul>
-                    <li>Decision of judges will be final and cannot be appealed.</li>
-                </ul>
-            );
-        },
-    },
-    {
-        id: 17,
-        description: "1K Prize Pool",
-        title: "Flute",
-        reg_fees: "Rs. 100/-",
-        src: "/Arang/Individual/flute.png",
-        ctaText: "Register",
-        non_mace_link: "https://forms.gle/opD3wc1FfxAWViV57",
-        mace_link: "https://forms.gle/bPUBv7oWAttXf4o88",
-        content: () => {
-            return (
-                <ul>
-                    <li>Participation is open for all engineering colleges.</li>
-                    <li>This is a solo event.</li>
-                    <li>Time Limit: 5 minutes. Any extensions in time will result in direct disqualification.</li>
-                    <li>Solos of famous songs can be played.</li>
-                    <li>Original compositions shall be encouraged and given more weightage.</li>
-                    <li>A combination of riffs and solos can be played.</li>
-                    <li>Judging criteria will be based on the solo performance only:</li>
-                    <ul>
-                        <li>Tempo</li>
-                        <li>Clarity of Notes</li>
-                        <li>Difficulty of the piece</li>
-                        <li>Dynamics</li>
-                    </ul>
-                    <li>The decision of the judges will be final and cannot be appealed.</li>
-                </ul>
-            );
-        },
-    },
 ];
 
 export const groupEvents = [
     {
         id: 1,
-        description: "6K Prize Pool",
-        title: "Group Dance Cinematic ",
+        description: "2.5K Prize Pool",
+        title: "Group dance western",
         reg_fees: "Rs. 600/-",
         src: "/Arang/Group/group_dance.png",
         ctaText: "Register",
@@ -422,8 +277,8 @@ export const groupEvents = [
     },
     {
         id: 12,
-        description: "8K Prize Pool",
-        title: "Group Dance - Semi Classical",
+        description: "4.5K Prize Pool",
+        title: "Group dance Semiclassical",
         reg_fees: "Rs. 800/-",
         src: "/Arang/Group/semiclassical_group.webp",
         ctaText: "Register",
@@ -450,8 +305,8 @@ export const groupEvents = [
     },
     {
         id: 2,
-        description: "8K Prize Pool",
-        title: "തിരുവാതിര",
+        description: "5.5K Prize Pool",
+        title: "Thiruvathira",
         reg_fees: "Rs. 800/-",
         src: "/Arang/Group/thiruvathira.png",
         ctaText: "Register",
@@ -481,11 +336,10 @@ export const groupEvents = [
             );
         },
     },
-
     {
         id: 3,
-        description: "8K Prize Pool",
-        title: "ഒപ്പന",
+        description: "5.5K Prize Pool",
+        title: "Oppana",
         reg_fees: "Rs. 800/-",
         src: "/Arang/Group/oppana1.webp",
         ctaText: "Register",
@@ -507,8 +361,8 @@ export const groupEvents = [
     },
     {
         id: 4,
-        description: "6K Prize Pool",
-        title: "Sangagaanam",
+        description: "1.3K Prize Pool",
+        title: "Group song",
         reg_fees: "Rs. 600/-",
         src: "/Arang/Group/group_song1.webp",
         ctaText: "Register",
@@ -531,9 +385,34 @@ export const groupEvents = [
         },
     },
     {
+        id: 13,
+        description: "1.3K Prize Pool",
+        title: "Patriotic song",
+        reg_fees: "Rs. 600/-",
+        src: "/Arang/Group/group_song1.webp",
+        ctaText: "Register",
+        non_mace_link: "https://forms.gle/nqhdwWfGKcGU86TEA",
+        mace_link: "https://forms.gle/wHX1b2AAiuMJMWfJ7",
+        content: () => {
+            return (
+                <ul>
+                    <li>Participation is open to all engineering colleges.</li>
+                    <li>Group participants should be a minimum of 6 and a maximum of 12 participants.</li>
+                    <li>Duration of performance: 3 to 5 minutes. Exceeding the time may lead to disqualification.</li>
+                    <li>Cinema songs are NOT allowed. Patriotic songs should be of a patriotic nature.</li>
+                    <li>Use of vulgar, sexually explicit, or violent language and/or lyrics is strictly prohibited.</li>
+                    <li>Only one participant from a team (lead) needs to register and provide the names of other participants to the event coordinators.</li>
+                    <li>Judgment is based on rhythm, formation, expression, costumes, make-up, sets, and overall effect.</li>
+                    <li>Participants who do not meet the required guidelines will be disqualified.</li>
+                    <li>Decision of the judges will be final and cannot be appealed.</li>
+                </ul>
+            );
+        },
+    },
+    {
         id: 5,
-        description: "8K Prize Pool",
-        title: "മാർഗ്ഗംകളി",
+        description: "5.5K Prize Pool",
+        title: "Margamkali",
         reg_fees: "Rs. 800/-",
         src: "/Arang/Group/margamkali.webp",
         ctaText: "Register",
@@ -555,8 +434,8 @@ export const groupEvents = [
     },
     {
         id: 6,
-        description: "6K Prize Pool",
-        title: "നടൻപാട്ട്",
+        description: "4.5K Prize Pool",
+        title: "Nadanpattu",
         reg_fees: "Rs. 600/-",
         src: "/Arang/Group/nadanpattu.webp",
         ctaText: "Register",
@@ -578,75 +457,8 @@ export const groupEvents = [
         },
     },
     {
-        id: 7,
-        description: "6K Prize Pool",
-        title: "വഞ്ചിപ്പാട്ട്",
-        reg_fees: "Rs. 600/-",
-        src: "/Arang/Group/vanjipattu.jpg",
-        ctaText: "Register",
-        non_mace_link: "https://forms.gle/GahBoHvi9JFxBab67",
-        mace_link: "https://forms.gle/GahBoHvi9JFxBab67",
-        content: () => {
-            return (
-                <ul>
-                    <li>Participation is open for all engineering colleges.</li>
-                    <li>A maximum of 10 people can participate.</li>
-                    <li>Out of 10 people, one will be the \"Thaalakkaaran\" and one will be the lead singer (\"Thalappattu\"), while the remaining 8 people will be supporting singers.</li>
-                    <li>The performance can be in one of the following styles: Veppupattu, Kuttanadan style, or Aranmula style.</li>
-                    <li>When registering the team, the style in which the song will be presented must be specified in advance.</li>
-                    <li>Judgment will be based on rhythm, tune, synchronization with the singers, expression, outfit, and overall presentation.</li>
-                    <li>Decisions of the judges will be final and cannot be appealed.</li>
-                </ul>
-            );
-        },
-    },
-    {
-        id: 8,
-        description: "8K Prize Pool",
-        title: "ദഫ് മുട്ട്",
-        reg_fees: "Rs. 800/-",
-        src: "/Arang/Group/Duffmuttu.jpg",
-        ctaText: "Register",
-        non_mace_link: "https://forms.gle/RYE7oMhpkAHV8Qf19",
-        mace_link: "https://forms.gle/pU9WuDv2otNa44Qh6",
-        content: () => {
-            return (
-                <ul>
-                    <li>Participation is open to all engineering colleges.</li>
-                    <li>Maximum number of participants allowed is Ten (10).</li>
-                    <li>Duration of the event should not be more than 10 minutes.</li>
-                    <li>The songs used for Duffmuttu should be \"Arabi Baith\".</li>
-                    <li>Judgment will be based on the \"Baith\", rhythm, percussion, and overall effect.</li>
-                    <li>Decision of the judges will be final and cannot be appealed.</li>
-                </ul>
-            );
-        },
-    },
-    {
-        id: 9,
-        description: "8K Prize Pool",
-        title: "കോൽക്കളി",
-        reg_fees: "Rs. 800/-",
-        src: "/Arang/Group/Kolkali.jpg",
-        ctaText: "Register",
-        non_mace_link: "https://forms.gle/U7hcW4sy3RQHfZLL6",
-        mace_link: "https://forms.gle/8UwWhzF3abkz88MC7",
-        content: () => {
-            return (
-                <ul>
-                    <li>Participation is open to all engineering colleges.</li>
-                    <li>Maximum number of participants allowed is Twelve (12).</li>
-                    <li>Duration of the event should not be more than 10 minutes.</li>
-                    <li>The songs used for Kolkali should be melodious and traditional \"Mappilappattu\".</li>
-                    <li>Judgment will be based on the originality of the song, rhythm, movements (Maithayam), formation, footwork, and overall effect.</li>
-                    <li>Decision of the judges will be final and cannot be appealed.</li>
-                </ul>
-            );
-        },
-    },
-    {
         id: 10,
-        description: "6K Prize Pool",
+        description: "2.5K Prize Pool",
         title: "Mime",
         reg_fees: "Rs. 600/-",
         src: "/Arang/Group/Mime.png",
@@ -661,34 +473,6 @@ export const groupEvents = [
                     <li>Maximum number of 8 participants are allowed.</li>
                     <li>Maximum time allotted for the performance is five (5) minutes.</li>
                     <li>Judgment will be based on qualities like idea, creativity of presentation, use of make-up, costume, music, and general impression.</li>
-                    <li>Decision of the judges will be final and cannot be appealed.</li>
-                </ul>
-            );
-        },
-    },
-    {
-        id: 11,
-        description: "8K Prize Pool",
-        title: "Spoof",
-        reg_fees: "Rs. 800/-",
-        src: "/Arang/Group/spoof.jpg",
-        ctaText: "Register",
-        non_mace_link: "https://forms.gle/CG8oGUrWReHVNjwo9",
-        mace_link: "https://forms.gle/FjKVsRkxcPYd8Z5k8",
-        content: () => {
-            return (
-                <ul>
-                    <li>Participation is open to all engineering colleges.</li>
-                    <li>Maximum of 12 members are allowed per team.</li>
-                    <li>Time limit: 10 minutes, empty to empty.</li>
-                    <li>Props and costumes are allowed.</li>
-                    <li>Points will be awarded on the basis of overall performance, which includes acting skills, script, dialogue delivery, presentation, and other factors.</li>
-                    <li>Extra points shall be awarded for costumes.</li>
-                    <li>Characters can be from any number of movies. Scene elements from other movies can also be included.</li>
-                    <li>Character portrayal, twists, and humor carry additional weightage.</li>
-                    <li>Backstage narration (live/recorded) is allowed.</li>
-                    <li>Background music is permitted.</li>
-                    <li>Plagiarism of any sort will lead to immediate disqualification. Plagiarism includes skits taken from YouTube or any other sources from the Internet.</li>
                     <li>Decision of the judges will be final and cannot be appealed.</li>
                 </ul>
             );
