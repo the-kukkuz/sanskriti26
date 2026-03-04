@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import Modal from "./checkClgModal";
 
 export function ExpandableCardArang({ events }) {
     const [active, setActive] = useState(null);
@@ -36,11 +35,7 @@ export function ExpandableCardArang({ events }) {
 
     useOutsideClick(ref, () => setActive(null));
 
-    const [isModalOpen, setIsModalOpen] = useState(false)
-    const [link, setLink] = useState({
-        non_mace_link: "",
-        mace_link: ""
-    });
+    // modal removed; direct redirect on register
 
     return (
         <div className="w-full max-w-7xl mx-auto">
@@ -108,20 +103,10 @@ export function ExpandableCardArang({ events }) {
                                     <motion.button
                                         layoutId={`cta-${active.title}-${active.id}`}
                                         onClick={() => {
-                                            // if on Alai page and the event has a registration link, alert about MACEians
-                                            if (typeof window !== 'undefined' && window.location.pathname.startsWith('/alai') && (active.non_mace_link || active.mace_link)) {
-                                                alert('Registration is only for MACEians');
-                                                // redirect to whichever link is available (prefer non_mace for guests)
-                                                const target = active.non_mace_link || active.mace_link;
-                                                if (target) {
-                                                    window.location.href = target;
-                                                }
-                                            } else {
-                                                setIsModalOpen(true);
-                                                setLink({
-                                                    non_mace_link: active.non_mace_link,
-                                                    mace_link: active.mace_link,
-                                                });
+                                            // always redirect straight to registration link (form handles MACE check)
+                                            const target = active.non_mace_link || active.mace_link;
+                                            if (target && typeof window !== 'undefined') {
+                                                window.location.href = target;
                                             }
                                         }}
                                         className="px-8 py-3 rounded-full font-bold bg-gold text-purple-dark hover:bg-white hover:scale-105 transition-all shadow-lg"
@@ -196,12 +181,7 @@ export function ExpandableCardArang({ events }) {
                 ))}
             </div>
 
-            <Modal
-                isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
-                non_mace_link={link.non_mace_link}
-                mace_link={link.mace_link}
-            />
+
         </div>
     );
 }
