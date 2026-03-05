@@ -15,7 +15,7 @@ const competitions = [
             { name: 'Ishani S Raj', phone: '+91 9319347616' },
             { name: 'Reese Mathew', phone: '+91 9446635655' },
         ],
-        registrationLink: 'https://forms.gle/kS8VjWBzZnw5g1eq5',
+        registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdGDd6S78LKPiFf3DmKLG8tCLFGJNo1uJzoZ1Forw8mlQRJvw/viewform?usp=header',
         fee: '₹200/- per head'
     },
     // {
