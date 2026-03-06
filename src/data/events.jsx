@@ -300,7 +300,7 @@ export const groupEvents = [
         description: "4.5K Prize Pool",
         title: "Group dance Semiclassical",
         reg_fees: "Rs. 800/-",
-        src: "/Arang/Group/semiclassical_group.webp",
+        src: "/Arang/Group/SemiClassical.jpg",
         ctaText: "Register",
         non_mace_link: "https://forms.gle/roWAqYH2qvzLkfWt5",
         mace_link: "https://forms.gle/roWAqYH2qvzLkfWt5",
