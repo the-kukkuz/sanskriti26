@@ -25,7 +25,7 @@ export const singleEvents = [
         description: "4K Prize Pool",
         title: "Bharathanatyam",
         reg_fees: "Rs. 150/-",
-        src: "/Arang/Individual/bharathanatyam.png",
+        src: "/Arang/Individual/Bharatanatyam.jpg",
         ctaText: "Register",
         non_mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSf42rBgV-vZ3OETlmEJFCU3hTC87nqYxIP_z6zC2ylozV2FlA/viewform",
         mace_link: "https://docs.google.com/forms/d/e/1FAIpQLSf42rBgV-vZ3OETlmEJFCU3hTC87nqYxIP_z6zC2ylozV2FlA/viewform",
